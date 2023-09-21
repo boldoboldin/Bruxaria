@@ -34,4 +34,12 @@ public class EnemyCtrl : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponent<PlayerCtrl>().PlayerHit(1);
+        }
+    }
 }

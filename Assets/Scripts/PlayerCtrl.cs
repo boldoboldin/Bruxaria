@@ -7,10 +7,10 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb2D;
 
     [Header("Status Variables")]
-    [SerializeField] private float hp;
     [SerializeField] private float def;
     [SerializeField] private float vel;
     [SerializeField] private string status = "null";
+    public float hp, maxHP;
 
     [Header("Shot Variables")]
     [SerializeField] private GameObject playerShot;
@@ -65,11 +65,10 @@ public class PlayerCtrl : MonoBehaviour
 
     public void PlayerHit(int damage)
     {
-        hp = hp - damage;
+        hp -= damage;
 
         if (hp <= 0)
         {
-            //Instantiate(explosionFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }

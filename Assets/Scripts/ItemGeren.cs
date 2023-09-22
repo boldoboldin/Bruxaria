@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGeren : MonoBehaviour
+public class ItemGeren : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> enemies;
+    [SerializeField] private List<GameObject> itens;
 
     [SerializeField] private float mimSpawTime;
     [SerializeField] private float maxSpawTime;
@@ -19,10 +19,10 @@ public class EnemyGeren : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EnemySpaw();
+        ItemSpaw();
     }
 
-    void EnemySpaw()
+    void ItemSpaw()
     {
         currentSpawTime -= Time.deltaTime;
 
@@ -33,9 +33,9 @@ public class EnemyGeren : MonoBehaviour
             float posY = Random.Range(-3.5f, 3.5f);
             Vector3 spawPos = new Vector2(10, posY);
 
-            int enemyType = Random.Range(0, 2);
+            int itemType = Random.Range(0, 7);
 
-            GameObject enemy = Instantiate(enemies[enemyType], spawPos, Quaternion.identity);
+            GameObject enemy = Instantiate(itens[itemType], spawPos, Quaternion.identity);
             Destroy(enemy, 5f);
         }
     }

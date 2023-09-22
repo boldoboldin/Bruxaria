@@ -10,9 +10,10 @@ public class PlayerCtrl : MonoBehaviour
     private Rigidbody2D rb2D;
 
     [SerializeField] private GameObject witchFalling, bagFalling, broomFalling;
+    [SerializeField] private GameObject fullHeartFalling, threeQuartHeartFalling, halfHeartFalling, quarterHeartFalling;
 
     [Header("Status Variables")]
-    [SerializeField] private float def;
+    [SerializeField] private int def;
     [SerializeField] private float vel;
     [SerializeField] private string status = "null";
     public float hp, maxHP;
@@ -20,8 +21,7 @@ public class PlayerCtrl : MonoBehaviour
     [Header("Shot Variables")]
     [SerializeField] private GameObject playerShot;
     [SerializeField] private Transform firePoint;
-    [SerializeField] private float shotSpeed;
-    [SerializeField] private float maxShotTime;
+    [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
     public string shotType = "null";
 
@@ -46,6 +46,14 @@ public class PlayerCtrl : MonoBehaviour
         Vector2 playerVel = new Vector2(0, moveY);
 
         rb2D.velocity = playerVel * vel;
+
+        if (Input.GetMouseButton(0))
+        {
+            Vector2 destination = Input.mousePosition;
+            Vector2 correctedDest = Camera.main.ScreenToWorldPoint(destination);
+            Vector2 finalDest = new Vector2(transform.position.x, correctedDest.y);
+            transform.position = Vector2.MoveTowards(transform.position, finalDest, vel * 0.002f);
+        }
     }
 
     private void Shot()
@@ -71,6 +79,27 @@ public class PlayerCtrl : MonoBehaviour
     public void PlayerHit(int damage)
     {
         hp -= damage;
+
+        switch (damage)
+        {
+            case 1:
+                Instantiate(quarterHeartFalling, transform.position, Quaternion.identity);
+                break;
+            case 2:
+               Instantiate(halfHeartFalling, transform.position, Quaternion.identity);
+                break;
+            case 3:
+                Instantiate(threeQuartHeartFalling, transform.position, Quaternion.identity);
+                break;
+            case 4:
+                Instantiate(fullHeartFalling, transform.position, Quaternion.identity);
+                break;
+            case 5:
+                Instantiate(fullHeartFalling, transform.position, Quaternion.identity);
+                Instantiate(quarterHeartFalling, transform.position, Quaternion.identity);
+                break;
+        }
+
         OnPlayerDamage?.Invoke();
 
         if (hp <= 0)

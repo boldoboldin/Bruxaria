@@ -421,6 +421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 984376005}
   - component: {fileID: 984376006}
+  - component: {fileID: 984376007}
   m_Layer: 0
   m_Name: Geren
   m_TagString: Untagged
@@ -460,7 +461,28 @@ MonoBehaviour:
   - {fileID: 2681592691064974891, guid: 642808dd1a6cbeb41b4338153663f637, type: 3}
   mimSpawTime: 2
   maxSpawTime: 5
-  currentSpawTime: 0
+--- !u!114 &984376007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984376004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c855b5dbb75173f4b8f582635f6bd83c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itens:
+  - {fileID: 229604655660150831, guid: b9e8b2d8f81b4e8409b70f06a0b54f2e, type: 3}
+  - {fileID: 98306665755678883, guid: 1016eddb28c190e4b9f809b049bd31ff, type: 3}
+  - {fileID: 1942235332550670895, guid: e46ea75f996475241b35d3360ed69b25, type: 3}
+  - {fileID: 5063128805670491174, guid: 5b9bb4945800c3342a4c7dd3eb447ee9, type: 3}
+  - {fileID: 1498895684365700115, guid: 8079ff2a83e864a439c09d17f9a44af6, type: 3}
+  - {fileID: 157657050335369253, guid: 0ca40cb36dc7d484fa71c130fc59c3a8, type: 3}
+  - {fileID: 8558552796600791518, guid: 36430805d1afe6143b42e6253569c5e2, type: 3}
+  mimSpawTime: 10
+  maxSpawTime: 20
 --- !u!1 &1001429591
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'V.0.0.4
+  m_text: 'V.0.0.5
 
 '
   m_isRightToLeft: 0
@@ -865,9 +887,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7928776027849782502, guid: f617ce9041ba79b49b556d49256424b8, type: 3}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: heartFalling
+      value: 
+      objectReference: {fileID: 1775582955355575496, guid: ff6c919b8f27a7349a6f35fcaf1552a8, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: witchFalling
       value: 
       objectReference: {fileID: 6009862514675644543, guid: 02bb93df787e9714e872178f1ce39258, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: fullHeartFalling
+      value: 
+      objectReference: {fileID: 218076694553631690, guid: 589be8ddd7d25e24d8c4acc914168cff, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: halfHeartFalling
+      value: 
+      objectReference: {fileID: 4263077925092972436, guid: 7946abaa32c721d439aff9c985cdc908, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: quarterHeartFalling
+      value: 
+      objectReference: {fileID: 3427699313357390502, guid: 7a824698819c2e6459f9eccbd40a537c, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: threeQuartHeartFalling
+      value: 
+      objectReference: {fileID: 5707163973674369740, guid: 6a6d8e78d130ba042a584140c1b28712, type: 3}
     - target: {fileID: 5573510451319689802, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: m_RootOrder
       value: 1

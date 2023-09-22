@@ -19,11 +19,6 @@ public class EnemyCtrl : MonoBehaviour
         rb2D.velocity = new Vector2(-vel, 0f);
     }
 
-    void Update()
-    {
-        
-    }
-
     public void EnemyHit(int damage)
     {
         hp = -damage;

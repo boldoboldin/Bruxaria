@@ -13,16 +13,16 @@ public class FallingObj : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
 
-        rotationZ = Random.Range(-150, 150);
-
-        Vector2 direction = new Vector2((float)Random.Range(-10, 10), (float)Random.Range(-10, 10));
-        float force = (float)Random.Range(-20, 20);
-        rb2D.AddForce(direction * force);
+        float force = (float)Random.Range(1, 300);
+        rb2D.AddForce(Vector2.up * force);
+        rb2D.AddForce(Vector2.left * force);
+        rotationZ = Random.Range(-force, force);
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z + rotationZ * Time.deltaTime);
+        Destroy(gameObject, 5f);
     }
 }

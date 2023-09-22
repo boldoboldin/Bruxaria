@@ -10,6 +10,16 @@ public class HPBarGeren : MonoBehaviour
     [SerializeField] private PlayerCtrl playerCtrl;
     List<HPGeren> hearts = new List<HPGeren>();
 
+    private void OnEnable()
+    {
+        PlayerCtrl.OnPlayerDamage += DrawHearts;
+    }
+
+    private void OnDisable()
+    {
+        PlayerCtrl.OnPlayerDamage -= DrawHearts;
+    }
+
     private void Start()
     {
         DrawHearts();
@@ -19,12 +29,18 @@ public class HPBarGeren : MonoBehaviour
     {
         ClearHearts();
 
-        float maxHPRemainder = playerCtrl.maxHP % 2;
-        int heartsToMake = (int)((playerCtrl.maxHP / 2) + maxHPRemainder);
+        float maxHPRemainder = playerCtrl.maxHP % 4;
+        int heartsToMake = (int)((playerCtrl.maxHP / 4) + maxHPRemainder);
 
         for (int i = 0; i < heartsToMake; i++)
         {
             CreateEmptyHeart();
+        }
+
+        for (int i = 0; i < hearts.Count; i++)
+        {
+            int heartStatusRemainder = (int)Mathf.Clamp(playerCtrl.hp - (i * 4), 0, 4);
+            hearts[i].SetHeartImage((HeartStatus)heartStatusRemainder);
         }
 
     }

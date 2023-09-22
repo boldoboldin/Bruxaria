@@ -7,7 +7,7 @@ public class EnemyCtrl : MonoBehaviour
     private Rigidbody2D rb2D;
 
     [Header("Status Variables")]
-    [SerializeField] private float hp;
+    [SerializeField] private int hp, str;
     [SerializeField] private float vel;
     [SerializeField] private string status = "null";
 
@@ -35,11 +35,11 @@ public class EnemyCtrl : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerCtrl>().PlayerHit(1);
+            other.GetComponent<PlayerCtrl>().PlayerHit(str);
         }
     }
 }

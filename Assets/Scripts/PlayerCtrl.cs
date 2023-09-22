@@ -1,10 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCtrl : MonoBehaviour
 {
+    public static event Action OnPlayerDamage;
+    
     private Rigidbody2D rb2D;
+
+    [SerializeField] private GameObject witchFalling, bagFalling, broomFalling;
 
     [Header("Status Variables")]
     [SerializeField] private float def;
@@ -66,9 +71,14 @@ public class PlayerCtrl : MonoBehaviour
     public void PlayerHit(int damage)
     {
         hp -= damage;
+        OnPlayerDamage?.Invoke();
 
         if (hp <= 0)
         {
+            Instantiate(witchFalling, transform.position, Quaternion.identity);
+            Instantiate(bagFalling, transform.position, Quaternion.identity);
+            Instantiate(broomFalling, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
     }

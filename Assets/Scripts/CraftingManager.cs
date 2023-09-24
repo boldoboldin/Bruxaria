@@ -2,18 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class CraftingManager : MonoBehaviour
 {
     private InventoryItensCtrl currentItem;
     public Image customCursor;
-
+    
     public CraftingSlotsCtrl[] slots;
 
     public List<InventoryItensCtrl> itensList;
     public string[] recipes;
     public InventoryItensCtrl[] recipeResults;
     public CraftingSlotsCtrl resultSlot;
+    public TextAsset recipeCSV;
+
+    private void Start()
+    {
+        string[] lines = recipeCSV.text.Split('\n');
+        List<string> stringCodeList = new List<string>();
+
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string line = lines[i];
+            string[] values = line.Split(',');
+            if (values.Length >= 2)
+            {
+                string stringCode = values[3];
+                stringCodeList.Add(stringCode);
+            }
+        }
+
+        recipes =  stringCodeList.ToArray();
+    }
 
     void Update()
     {

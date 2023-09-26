@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7864834190777449167}
   - component: {fileID: 7445414108023277366}
   - component: {fileID: -8861982554001153552}
-  - component: {fileID: -1379119135778822086}
+  - component: {fileID: -8213862527874223412}
   m_Layer: 0
   m_Name: Sapphire
   m_TagString: Item
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-1379119135778822086
+--- !u!114 &-8213862527874223412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1942235332550670895}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dacd1dd111ae394897ec035c5defe7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca787703ff3557945ae2733fb3c573ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 4

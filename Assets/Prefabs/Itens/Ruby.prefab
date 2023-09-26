@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4971956844028905360}
   - component: {fileID: 1567261365979585424}
   - component: {fileID: 207664113722624840}
-  - component: {fileID: -8601191788174270787}
+  - component: {fileID: 4734805446851113947}
   m_Layer: 0
   m_Name: Ruby
   m_TagString: Item
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-8601191788174270787
+--- !u!114 &4734805446851113947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 229604655660150831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dacd1dd111ae394897ec035c5defe7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca787703ff3557945ae2733fb3c573ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 4

@@ -12,6 +12,9 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameObject witchFalling, bagFalling, broomFalling;
     [SerializeField] private GameObject fullHeartFalling, threeQuartHeartFalling, halfHeartFalling, quarterHeartFalling;
 
+    [SerializeField] private UI_Inventory uiInventory;
+    private InventoryCtrl inventory;
+
     [Header("Status Variables")]
     [SerializeField] private int def;
     [SerializeField] private float vel;
@@ -24,6 +27,12 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
     public string shotType = "null";
+
+    private void Awake()
+    {
+        inventory = new InventoryCtrl();
+        uiInventory.SetInventory(inventory);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -114,9 +123,12 @@ public class PlayerCtrl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Item"))
+        ItemWorld itemWorld = other.GetComponent<ItemWorld>();
+
+        if (itemWorld != null)
         {
-            Destroy(other.gameObject);
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
         }
     }
 }

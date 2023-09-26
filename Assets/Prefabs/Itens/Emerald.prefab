@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1186421637747456028}
   - component: {fileID: -4879430722507115072}
   - component: {fileID: 221912434546365731}
-  - component: {fileID: 1191192557135957847}
+  - component: {fileID: -8896256658082377463}
   m_Layer: 0
   m_Name: Emerald
   m_TagString: Item
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1191192557135957847
+--- !u!114 &-8896256658082377463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 98306665755678883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dacd1dd111ae394897ec035c5defe7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca787703ff3557945ae2733fb3c573ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 4

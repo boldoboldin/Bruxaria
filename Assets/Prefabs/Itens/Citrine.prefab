@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 465889875627744964}
   - component: {fileID: -2853923797137870869}
   - component: {fileID: 8124765939346936142}
-  - component: {fileID: 3702912694786849734}
+  - component: {fileID: -727620341540305321}
   m_Layer: 0
-  m_Name: Gold
+  m_Name: Citrine
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3702912694786849734
+--- !u!114 &-727620341540305321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 157657050335369253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dacd1dd111ae394897ec035c5defe7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca787703ff3557945ae2733fb3c573ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 4

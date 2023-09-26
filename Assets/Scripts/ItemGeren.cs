@@ -35,8 +35,8 @@ public class ItemGeren : MonoBehaviour
 
             int itemType = Random.Range(0, 7);
 
-            GameObject enemy = Instantiate(itens[itemType], spawPos, Quaternion.identity);
-            Destroy(enemy, 5f);
+            GameObject item = Instantiate(itens[itemType], spawPos, Quaternion.identity);
+            Destroy(item, 5f);
         }
     }
 }

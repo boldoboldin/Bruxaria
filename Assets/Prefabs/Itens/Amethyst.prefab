@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 242600517584108750}
   - component: {fileID: -3983345352364238094}
   - component: {fileID: 4635670963542163212}
-  - component: {fileID: -4904749680114362418}
+  - component: {fileID: -5957462498000629434}
   m_Layer: 0
   m_Name: Amethyst
   m_TagString: Item
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-4904749680114362418
+--- !u!114 &-5957462498000629434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498895684365700115}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dacd1dd111ae394897ec035c5defe7e, type: 3}
+  m_Script: {fileID: 11500000, guid: ca787703ff3557945ae2733fb3c573ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vel: 4

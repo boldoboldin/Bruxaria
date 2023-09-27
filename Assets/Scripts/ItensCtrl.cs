@@ -1,11 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItensCtrl
+[Serializable] public class ItensCtrl
 {
-    private Rigidbody2D rb2D;
-
     public enum ItemType
     {
         Ruby,

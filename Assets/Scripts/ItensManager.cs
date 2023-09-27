@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemGeren : MonoBehaviour
+public class ItensManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> itens;
+    [SerializeField] private List<GameObject> itensSpawners;
 
     [SerializeField] private float mimSpawTime;
     [SerializeField] private float maxSpawTime;
@@ -35,8 +35,7 @@ public class ItemGeren : MonoBehaviour
 
             int itemType = Random.Range(0, 7);
 
-            GameObject item = Instantiate(itens[itemType], spawPos, Quaternion.identity);
-            Destroy(item, 5f);
+            GameObject item = Instantiate(itensSpawners[itemType], spawPos, Quaternion.identity);
         }
     }
 }

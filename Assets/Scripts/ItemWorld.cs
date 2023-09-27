@@ -14,7 +14,7 @@ public class ItemWorld : MonoBehaviour
         return itemWorld;
     }
 
-        private Rigidbody2D rb2D;
+    private Rigidbody2D rb2D;
 
     private ItensCtrl item;
     private SpriteRenderer sprtRenderer;

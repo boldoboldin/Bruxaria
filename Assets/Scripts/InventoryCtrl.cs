@@ -12,10 +12,6 @@ public class InventoryCtrl
     public InventoryCtrl()
     {
         itensList = new List<ItensCtrl>();
-
-        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Ruby, amount = 1 });
-        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Sapphire, amount = 1 });
-        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Emerald, amount = 1 });
     }
 
     public void AddItem(ItensCtrl item)

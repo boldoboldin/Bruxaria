@@ -32,6 +32,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         inventory = new InventoryCtrl();
         uiInventory.SetInventory(inventory);
+
     }
 
     // Start is called before the first frame update

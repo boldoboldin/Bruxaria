@@ -18,11 +18,11 @@ public class UI_Inventory : MonoBehaviour
     {
         this.inventory = inventory;
 
-        inventory.OnItemListChanged += InventoryCtrl_OnItemListChanged;
+        inventory.OnItemListChanged += Inventory_OnItemListChanged;
         RefreshInventory();
     }
 
-    private void InventoryCtrl_OnItemListChanged(object sender, System.EventArgs e)
+    private void Inventory_OnItemListChanged(object sender, System.EventArgs e)
     {
         RefreshInventory();
     }

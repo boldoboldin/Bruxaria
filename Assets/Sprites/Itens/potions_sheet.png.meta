@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2f54f3656aeb7784984192669dbb60ad
+guid: 307168f968a132a4ea4de2fe3980e06d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stones_sheet_0
+      name: potions_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56a68b056391c9f45bd5f1c2e8f1f094
-      internalID: 1547440776
+      spriteID: 7f102baebf39f3b4fa948297ff2abb78
+      internalID: 161500780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_1
+      name: potions_sheet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7195bbaf43528a04789c0a6e8e37e338
-      internalID: 2147192556
+      spriteID: 95e2a82a327ba9348aa84e26a13dcb09
+      internalID: -400745324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_2
+      name: potions_sheet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6541ba165de60064d90b30cd09faf43a
-      internalID: -208733574
+      spriteID: 11a2ac0ca3dad9b4d937e08731de5418
+      internalID: -290877187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_3
+      name: potions_sheet_3
       rect:
         serializedVersion: 2
         x: 48
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a17fd71e057560347ae0cc4c3612f7e2
-      internalID: 2064632698
+      spriteID: 8d72167a80ac5dd48b7c2e4e7038e05e
+      internalID: -902136337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_4
+      name: potions_sheet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 015c5f4d9f105664ebd525cf708894aa
-      internalID: 1795321000
+      spriteID: bf22ddc40f82b82439cf6db87a2f655a
+      internalID: -1803985417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_5
+      name: potions_sheet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 611c97c87b1134a4bb1e6574067d4b73
-      internalID: 1389388214
+      spriteID: d83784bad768e414b8b60b9e28dd1bd4
+      internalID: 686903041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_6
+      name: potions_sheet_6
       rect:
         serializedVersion: 2
         x: 96
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528071fdc5c91ac43b822a9f9c4e93cd
-      internalID: -1097207573
+      spriteID: e744460f9569c7f4dad9c22e50d8094e
+      internalID: 221030531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stones_sheet_7
+      name: potions_sheet_7
       rect:
         serializedVersion: 2
         x: 112
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36c7e35762356a94d8a18125fd035ca6
-      internalID: 887736959
+      spriteID: c87734ff2e938bc47ac8eebb09fa8c2b
+      internalID: 423425373
       vertices: []
       indices: 
       edges: []
@@ -283,14 +283,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stones_sheet_1: 2147192556
-      stones_sheet_4: 1795321000
-      stones_sheet_3: 2064632698
-      stones_sheet_5: 1389388214
-      stones_sheet_0: 1547440776
-      stones_sheet_7: 887736959
-      stones_sheet_6: -1097207573
-      stones_sheet_2: -208733574
+      potions_sheet_5: 686903041
+      potions_sheet_6: 221030531
+      potions_sheet_1: -400745324
+      potions_sheet_4: -1803985417
+      potions_sheet_0: 161500780
+      potions_sheet_2: -290877187
+      potions_sheet_3: -902136337
+      potions_sheet_7: 423425373
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

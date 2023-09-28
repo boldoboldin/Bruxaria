@@ -22,4 +22,8 @@ public class ItensAsset : MonoBehaviour
     public Sprite diamondSprt;
     public Sprite onyxSprt;
 
+    public Sprite hpPotionL_Sprt;
+    public Sprite hpPotionS_Sprt;
+    
+
 }

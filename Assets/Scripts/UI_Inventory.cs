@@ -1,3 +1,4 @@
+using CodeMonkey.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,13 +42,21 @@ public class UI_Inventory : MonoBehaviour
         
         foreach (ItensCtrl item in inventory.GetItemList())
         {
-            RectTransform itemSlotRectTranform = Instantiate(itemSlot, itemSlotContainer).GetComponent<RectTransform>();
-            itemSlotRectTranform.gameObject.SetActive(true);
+            RectTransform itemSlotRectTransform = Instantiate(itemSlot, itemSlotContainer).GetComponent<RectTransform>();
+            itemSlotRectTransform.gameObject.SetActive(true);
 
-            itemSlotRectTranform.anchoredPosition = new Vector2(xPos * itemSLotCellSize, yPos);
-            Image image = itemSlotRectTranform.Find("Image").GetComponent<Image>();
+            itemSlotRectTransform.GetComponent<UI_Button>().MouseRightClickFunc = () =>
+            {
+                inventory.UseItem(item);
+            };
+
+            itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSLotCellSize, yPos);
+            Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
-            xPos++;
+            if (xPos <= 8)
+            {
+                xPos++;
+            }
         }
     }
 }

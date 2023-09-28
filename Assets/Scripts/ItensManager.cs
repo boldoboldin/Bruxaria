@@ -33,7 +33,7 @@ public class ItensManager : MonoBehaviour
             float posY = Random.Range(-3.5f, 3.5f);
             Vector3 spawPos = new Vector2(10, posY);
 
-            int itemType = Random.Range(0, 7);
+            int itemType = Random.Range(0, 10);
 
             GameObject item = Instantiate(itensSpawners[itemType], spawPos, Quaternion.identity);
         }

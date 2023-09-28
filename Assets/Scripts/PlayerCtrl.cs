@@ -30,7 +30,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private void Awake()
     {
-        inventory = new InventoryCtrl();
+        inventory = new InventoryCtrl(UseItem);
         uiInventory.SetInventory(inventory);
 
     }
@@ -84,6 +84,21 @@ public class PlayerCtrl : MonoBehaviour
         }
         
         currentShotTime = maxShotTime;
+    }
+
+    private void UseItem(ItensCtrl item)
+    {
+        switch (item.itemType)
+        {
+            case ItensCtrl.ItemType.HP_PotionL:
+                hp = maxHP;
+                inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionL, amount = 1 });
+                break;
+            case ItensCtrl.ItemType.HP_PotionS:
+                hp = hp + 4;
+                inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionS, amount = 1 });
+                break;
+        }
     }
 
     public void PlayerHit(int damage)

@@ -447,6 +447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 678037834}
+  - component: {fileID: 678037835}
   m_Layer: 5
   m_Name: ItemSlot
   m_TagString: Untagged
@@ -475,6 +476,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &678037835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678037833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602f74cbbbd80034b96f88091a8e7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverBehaviourType: 0
+  hoverBehaviour_Color_Enter: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Color_Exit: {r: 0, g: 0, b: 0, a: 0}
+  hoverBehaviour_Image: {fileID: 0}
+  hoverBehaviour_Sprite_Exit: {fileID: 0}
+  hoverBehaviour_Sprite_Enter: {fileID: 0}
+  hoverBehaviour_Move: 0
+  hoverBehaviour_Move_Amount: {x: 0, y: 0}
+  triggerMouseOutFuncOnClick: 0
 --- !u!114 &678344642 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
@@ -524,6 +546,8 @@ MonoBehaviour:
   - {fileID: 2811302104808218818, guid: 94bc02bcb54a78b4e88031d1b7e67679, type: 3}
   - {fileID: 327739918186620813, guid: 0bb7ecf3d2e910544ae649e2d22e87b2, type: 3}
   - {fileID: 3279311496138028329, guid: 001c879159765fe498b01ba5353e21f8, type: 3}
+  - {fileID: 8668623396113080422, guid: abd83cdd384d7d047af38da64fbf5634, type: 3}
+  - {fileID: 3394749724867990640, guid: 40adaa1678f0ed849b0c7cb47a82f12d, type: 3}
   mimSpawTime: 10
   maxSpawTime: 20
 --- !u!4 &883228070
@@ -648,7 +672,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'V.0.0.12
+  m_text: 'V.0.0.13
 
 '
   m_isRightToLeft: 0
@@ -1035,7 +1059,9 @@ MonoBehaviour:
   amethystaSprt: {fileID: 1795321000, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
   citrineSprt: {fileID: 1389388214, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
   diamondSprt: {fileID: -1097207573, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
-  onyxSprt: {fileID: -1097207573, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
+  onyxSprt: {fileID: 887736959, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
+  hpPotionL_Sprt: {fileID: 686903041, guid: 307168f968a132a4ea4de2fe3980e06d, type: 3}
+  hpPotionS_Sprt: {fileID: -290877187, guid: 307168f968a132a4ea4de2fe3980e06d, type: 3}
 --- !u!4 &1189764462
 Transform:
   m_ObjectHideFlags: 0

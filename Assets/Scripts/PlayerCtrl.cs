@@ -12,41 +12,41 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameObject witchFalling, bagFalling, broomFalling;
     [SerializeField] private GameObject fullHeartFalling, threeQuartHeartFalling, halfHeartFalling, quarterHeartFalling;
 
-    [SerializeField] private UI_Inventory uiInventory;
-    private InventoryCtrl inventory;
-
     [Header("Status Variables")]
-    [SerializeField] private int def;
+    //[SerializeField] private int def;
     [SerializeField] private float vel;
-    [SerializeField] private string status = "null";
+    //[SerializeField] private string status = "null";
     public float hp, maxHP;
 
     [Header("Shot Variables")]
-    [SerializeField] private GameObject playerShot;
-    [SerializeField] private Transform firePoint;
+    //[SerializeField] private GameObject playerShot;
+    //[SerializeField] private Transform firePoint;
     [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
-    public string shotType = "null";
+    //public string shotType = "null";
 
-    private void Awake()
-    {
-        inventory = new InventoryCtrl(UseItem);
-        uiInventory.SetInventory(inventory);
 
-    }
+    [Header("Inventory/Crafting Variables")]
+    [SerializeField] private GameObject hudInventory;
+    [SerializeField] private GameObject hudCrafting;
+    private InventoryCtrl inventory;
+    public UI_Inventory uiInventory;
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentShotTime = maxShotTime;
+        inventory = new InventoryCtrl(UseItem); //antes no awake
+        uiInventory.SetInventory(inventory); //antes no awake
     }
 
     // Update is called once per frame
     void Update()
     {
         Movement();
-        Shot();
+        //Shot();
     }
 
     private void Movement()
@@ -57,34 +57,50 @@ public class PlayerCtrl : MonoBehaviour
 
         rb2D.velocity = playerVel * vel;
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && Time.timeScale == 1)
         {
             Vector2 destination = Input.mousePosition;
             Vector2 correctedDest = Camera.main.ScreenToWorldPoint(destination);
             Vector2 finalDest = new Vector2(transform.position.x, correctedDest.y);
             transform.position = Vector2.MoveTowards(transform.position, finalDest, vel * 0.002f);
         }
-    }
 
-    private void Shot()
-    {
-        currentShotTime -= Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.Space) && currentShotTime <= 0 && shotType != "null")
+        if (Input.GetMouseButtonUp(0))
         {
-            Fire();
+            hudInventory.SetActive(true);
+            hudCrafting.SetActive(true);
+
+            Time.timeScale = 0.01f;
+        }
+
+        if (Input.GetMouseButton(1))
+        {
+            hudInventory.SetActive(true);
+            hudCrafting.SetActive(true);
+
+            Time.timeScale = 1;
         }
     }
 
-    void Fire()
-    {
-        if (shotType == "Fire Ball")
-        {
-            Instantiate(playerShot, firePoint.transform.position, Quaternion.identity);
-        }
+    //private void Shot()
+    //{
+    //    currentShotTime -= Time.deltaTime;
+
+    //    if (Input.GetKey(KeyCode.Space) && currentShotTime <= 0 && shotType != "null")
+    //    {
+    //        Fire();
+    //    }
+    //}
+
+    //void Fire()
+    //{
+    //    if (shotType == "Fire Ball")
+    //    {
+    //        Instantiate(playerShot, firePoint.transform.position, Quaternion.identity);
+    //    }
         
-        currentShotTime = maxShotTime;
-    }
+    //    currentShotTime = maxShotTime;
+    //}
 
     private void UseItem(ItensCtrl item)
     {

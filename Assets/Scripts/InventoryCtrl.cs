@@ -46,7 +46,29 @@ public class InventoryCtrl
 
     public void RemoveItem(ItensCtrl item)
     {
-        itensList.Remove(item);
+        if (item.IsStackable())
+        {
+            ItensCtrl itemInInventory = null;
+
+            foreach (ItensCtrl inventory in itensList)
+            {
+                if (inventory.itemType == item.itemType)
+                {
+                    inventory.amount -= item.amount;
+                    itemInInventory = inventory;
+                }
+            }
+
+            if (itemInInventory != null && itemInInventory.amount <= 0)
+            {
+                itensList.Remove(item);
+            }
+        }
+        else
+        {
+            itensList.Remove(item);
+        }
+
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 

@@ -15,6 +15,7 @@ public class PlayerCtrl : MonoBehaviour
     [Header("Status Variables")]
     //[SerializeField] private int def;
     [SerializeField] private float vel;
+    private bool canMove;
     //[SerializeField] private string status = "null";
     public float hp, maxHP;
 
@@ -27,10 +28,9 @@ public class PlayerCtrl : MonoBehaviour
 
 
     [Header("Inventory/Crafting Variables")]
-    [SerializeField] private GameObject hudInventory;
-    [SerializeField] private GameObject hudCrafting;
     private InventoryCtrl inventory;
     public UI_Inventory uiInventory;
+    public GameObject hudInventory, hudCrafting, pauseBttn, returnBttn;
 
 
     // Start is called before the first frame update
@@ -38,8 +38,10 @@ public class PlayerCtrl : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentShotTime = maxShotTime;
-        inventory = new InventoryCtrl(UseItem); //antes no awake
-        uiInventory.SetInventory(inventory); //antes no awake
+        inventory = new InventoryCtrl(UseItem); //antes estava no awake
+        uiInventory.SetInventory(inventory); //antes estava  no awake
+
+        HideInventory();
     }
 
     // Update is called once per frame
@@ -57,28 +59,12 @@ public class PlayerCtrl : MonoBehaviour
 
         rb2D.velocity = playerVel * vel;
 
-        if (Input.GetMouseButton(0) && Time.timeScale == 1)
+        if (Input.GetMouseButton(0) && canMove)
         {
             Vector2 destination = Input.mousePosition;
             Vector2 correctedDest = Camera.main.ScreenToWorldPoint(destination);
             Vector2 finalDest = new Vector2(transform.position.x, correctedDest.y);
             transform.position = Vector2.MoveTowards(transform.position, finalDest, vel * 0.002f);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            hudInventory.SetActive(true);
-            hudCrafting.SetActive(true);
-
-            Time.timeScale = 0.01f;
-        }
-
-        if (Input.GetMouseButton(1))
-        {
-            hudInventory.SetActive(true);
-            hudCrafting.SetActive(true);
-
-            Time.timeScale = 1;
         }
     }
 
@@ -107,11 +93,13 @@ public class PlayerCtrl : MonoBehaviour
         switch (item.itemType)
         {
             case ItensCtrl.ItemType.HP_PotionL:
-                hp = maxHP;
+                Debug.Log("Botão");
+                //hp = maxHP;
                 inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionL, amount = 1 });
                 break;
             case ItensCtrl.ItemType.HP_PotionS:
-                hp = hp + 4;
+                Debug.Log("Botão");
+                //hp = hp + 4;
                 inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionS, amount = 1 });
                 break;
         }
@@ -151,6 +139,32 @@ public class PlayerCtrl : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    public void ShowInventory()
+    {
+        hudInventory.SetActive(true);
+        hudCrafting.SetActive(true);
+
+        returnBttn.SetActive(true);
+        pauseBttn.SetActive(false);
+
+        canMove = false;
+
+        Time.timeScale = 0.1f;
+    }
+
+    public void HideInventory()
+    {
+        hudInventory.SetActive(false);
+        hudCrafting.SetActive(false);
+
+        returnBttn.SetActive(false);
+        pauseBttn.SetActive(true);
+
+        canMove = true;
+
+        Time.timeScale = 1;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

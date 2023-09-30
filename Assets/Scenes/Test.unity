@@ -1245,7 +1245,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0012158, y: -0.00013351}
+  m_AnchoredPosition: {x: 0.0012207031, y: -0.0001373291}
   m_SizeDelta: {x: 206.23, y: 197.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880606796
@@ -1594,7 +1594,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -267.4, y: -15}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 660.1324, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1001429593
 MonoBehaviour:
@@ -1616,7 +1616,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'V.0.0.15
+  m_text: 'the_broom_and_her_witch_V.0.0.16
 
 '
   m_isRightToLeft: 0
@@ -3176,7 +3176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0017357, y: -0.0020599}
+  m_AnchoredPosition: {x: -0.0017700195, y: -0.0020599365}
   m_SizeDelta: {x: 121.31, y: 116.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021563928
@@ -3324,6 +3324,10 @@ PrefabInstance:
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: hp
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: vel
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: m_Enabled

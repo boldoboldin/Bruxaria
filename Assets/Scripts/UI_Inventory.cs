@@ -7,6 +7,8 @@ using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
+    public PlayerCtrl player;
+    
     private InventoryCtrl inventory;
     private Transform itemSlotContainer, itemSlot;
 
@@ -39,14 +41,14 @@ public class UI_Inventory : MonoBehaviour
         
         int xPos = 0;
         int yPos = 0;
-        float itemSLotCellSize = 175f;
+        float itemSLotCellSize = 156f;
         
         foreach (ItensCtrl item in inventory.GetItemList())
         {
             RectTransform itemSlotRectTransform = Instantiate(itemSlot, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
-            itemSlotRectTransform.GetComponent<UI_Button>().MouseRightClickFunc = () =>
+            itemSlotRectTransform.GetComponent<UI_Button>().ClickFunc = () =>
             {
                 inventory.UseItem(item);
             };
@@ -66,9 +68,15 @@ public class UI_Inventory : MonoBehaviour
             }
             
 
-            if (xPos <= 8)
+            if (xPos <= 6)
             {
                 xPos++;
+                player.canCollect = true;
+            }
+            
+            if (xPos > 6)
+            {
+                player.canCollect = false;
             }
         }
     }

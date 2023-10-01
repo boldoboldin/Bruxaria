@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 462580bf20bfd69418c3e8656976190d
+guid: 366745e4d929a7d4c96d7980f535e0cc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button_sheet_0
+      name: play_button_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1518a3304f77bae468f79f412f02e7c4
-      internalID: 1648825413
+      spriteID: 1b6ee80896d742848aac68acba7bd52f
+      internalID: -68951273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: button_sheet_1
+      name: play_button_sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -140,50 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8518e72221594bd4ea7da23d28ef8e04
-      internalID: 530804190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7437a1cb3cbec6544a2d8e5cf22d5702
-      internalID: -1631953277
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: button_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d289bccc6fa61db41b12e1a97417a091
-      internalID: -995279523
+      spriteID: 0861a39e0d1b5ba48a5d2fe1c2d95f0e
+      internalID: 279332980
       vertices: []
       indices: 
       edges: []
@@ -199,10 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      button_sheet_0: 1648825413
-      button_sheet_1: 530804190
-      button_sheet_3: -995279523
-      button_sheet_2: -1631953277
+      play_button_sheet_1: 279332980
+      play_button_sheet_0: -68951273
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

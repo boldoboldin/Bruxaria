@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGeren : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> enemies;
 
@@ -33,7 +33,7 @@ public class EnemyGeren : MonoBehaviour
             float posY = Random.Range(-3.5f, 3.5f);
             Vector3 spawPos = new Vector2(10, posY);
 
-            int enemyType = Random.Range(0, 2);
+            int enemyType = Random.Range(0, 3);
 
             GameObject enemy = Instantiate(enemies[enemyType], spawPos, Quaternion.identity);
             Destroy(enemy, 5f);

@@ -30,7 +30,8 @@ public class PlayerCtrl : MonoBehaviour
     [Header("Inventory/Crafting Variables")]
     private InventoryCtrl inventory;
     public UI_Inventory uiInventory;
-    public GameObject hudInventory, hudCrafting, pauseBttn, returnBttn;
+    public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel;
+    public bool canCollect = true;
 
 
     // Start is called before the first frame update
@@ -47,8 +48,12 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
         //Shot();
+    }
+
+    private void FixedUpdate()
+    {
+        Movement();
     }
 
     private void Movement()
@@ -93,14 +98,12 @@ public class PlayerCtrl : MonoBehaviour
         switch (item.itemType)
         {
             case ItensCtrl.ItemType.HP_PotionL:
-                Debug.Log("Botão");
-                //hp = maxHP;
-                inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionL, amount = 1 });
+                PlayerHit(-4);
+                inventory.RemoveItem(item);
                 break;
             case ItensCtrl.ItemType.HP_PotionS:
-                Debug.Log("Botão");
-                //hp = hp + 4;
-                inventory.RemoveItem(new ItensCtrl { itemType = ItensCtrl.ItemType.HP_PotionS, amount = 1 });
+                PlayerHit(-2);
+                inventory.RemoveItem(item);
                 break;
         }
     }
@@ -146,7 +149,9 @@ public class PlayerCtrl : MonoBehaviour
         hudInventory.SetActive(true);
         hudCrafting.SetActive(true);
 
-        returnBttn.SetActive(true);
+        resumeBttn.SetActive(true);
+        settingsBttn.SetActive(true);
+        fogPanel.SetActive(true);
         pauseBttn.SetActive(false);
 
         canMove = false;
@@ -159,7 +164,9 @@ public class PlayerCtrl : MonoBehaviour
         hudInventory.SetActive(false);
         hudCrafting.SetActive(false);
 
-        returnBttn.SetActive(false);
+        resumeBttn.SetActive(false);
+        settingsBttn.SetActive(false);
+        fogPanel.SetActive(false);
         pauseBttn.SetActive(true);
 
         canMove = true;
@@ -171,7 +178,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         ItemWorld itemWorld = other.GetComponent<ItemWorld>();
 
-        if (itemWorld != null)
+        if (itemWorld != null && canCollect)
         {
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();

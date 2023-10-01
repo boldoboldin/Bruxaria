@@ -4886,7 +4886,7 @@ SpriteRenderer:
   m_SortingLayerID: -1427184717
   m_SortingLayer: 1
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2007081517, guid: 7e554247eda16674a9b5c2355742497b, type: 3}
+  m_Sprite: {fileID: 1347388744, guid: 2fe00d1de3b94f9489ae33bff0e49b19, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4907,7 +4907,7 @@ Animator:
   m_GameObject: {fileID: 2681592690839965440}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b9c2d4195597fd04894965bd19ae90b7, type: 2}
+  m_Controller: {fileID: 9100000, guid: e152ea730a007d04889ae77320ece99d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4930,7 +4930,7 @@ GameObject:
   - component: {fileID: 2681592691064974889}
   - component: {fileID: 2681592691064974903}
   m_Layer: 7
-  m_Name: BlackCat
+  m_Name: GhostCat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5004,7 +5004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   str: 2
-  vel: 6
+  vel: 6.5
   status: null
   explosionFX: {fileID: 0}
 --- !u!1 &2681592691114471986

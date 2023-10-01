@@ -61,20 +61,23 @@ public class InventoryCtrl
 
             if (itemInInventory != null && itemInInventory.amount <= 0)
             {
-                itensList.Remove(item);
+                itensList.Remove(itemInInventory);
             }
         }
         else
         {
             itensList.Remove(item);
+            Debug.Log("remove item");
         }
 
+        
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public void UseItem (ItensCtrl item)
     {
         useItemAct(item);
+        Debug.Log("use item inventory");
     }
 
     public List<ItensCtrl> GetItemList()

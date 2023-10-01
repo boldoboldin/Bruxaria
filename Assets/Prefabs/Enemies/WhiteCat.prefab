@@ -5002,7 +5002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d53455cfddbe01449b73ca1d4d7dbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 4
   str: 2
   vel: 5.5
   status: null

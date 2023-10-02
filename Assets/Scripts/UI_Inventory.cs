@@ -7,15 +7,23 @@ using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
-    public PlayerCtrl player;
+    [SerializeField] private Transform prefabUI_Item;
     
     private InventoryCtrl inventory;
     private Transform itemSlotContainer, itemSlot;
+
+    public PlayerCtrl player;
 
     private void Awake()
     {
         itemSlotContainer = transform.Find("ItemSlotContainer");
         itemSlot = itemSlotContainer.Find("ItemSlot");
+        itemSlot.gameObject.SetActive(false);
+    }
+
+    public void SetPlayer(PlayerCtrl player)
+    {
+        this.player = player;
     }
 
     public void SetInventory(InventoryCtrl inventory)
@@ -42,31 +50,39 @@ public class UI_Inventory : MonoBehaviour
         int xPos = 0;
         int yPos = 0;
         float itemSLotCellSize = 156f;
-        
-        foreach (ItensCtrl item in inventory.GetItemList())
+
+        foreach (InventoryCtrl.InventorySlot inventorySlot in inventory.GetInventorySlotArray())
         {
+            ItensCtrl item = inventorySlot.GetItem();
+
             RectTransform itemSlotRectTransform = Instantiate(itemSlot, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
             itemSlotRectTransform.GetComponent<UI_Button>().ClickFunc = () =>
             {
-                inventory.UseItem(item);
+                //inventory.UseItem(item);
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSLotCellSize, yPos);
-            Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
-            image.sprite = item.GetSprite();
-            TextMeshProUGUI uiText = itemSlotRectTransform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>();
-            
-            if (item.amount > 1)
+
+            if (!inventorySlot.IsEmpty())
             {
-                uiText.SetText(item.amount.ToString());
+                // Not Empty, has Item
+                Transform uiItemTransform = Instantiate(prefabUI_Item, itemSlotContainer);
+                uiItemTransform.GetComponent<RectTransform>().anchoredPosition = itemSlotRectTransform.anchoredPosition;
+                UI_Item uiItem = uiItemTransform.GetComponent<UI_Item>();
+                uiItem.SetItem(item);
             }
-            else
-            {
-                uiText.SetText("");
-            }
-            
+
+            InventoryCtrl.InventorySlot tmpInventorySlot = inventorySlot;
+
+            UI_ItemSlot uiItemSlot = itemSlotRectTransform.GetComponent<UI_ItemSlot>();
+            uiItemSlot.SetOnDropAction(() => {
+
+                ItensCtrl draggedItem = UI_ItemDrag.Instance.GetItem();
+                draggedItem.RemoveFromItemHolder();
+                inventory.AddItem(draggedItem, tmpInventorySlot);
+            });
 
             if (xPos <= 6)
             {

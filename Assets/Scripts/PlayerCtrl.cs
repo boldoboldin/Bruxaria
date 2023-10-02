@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CodeMonkey.Utils;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -29,7 +30,6 @@ public class PlayerCtrl : MonoBehaviour
 
     [Header("Inventory/Crafting Variables")]
     private InventoryCtrl inventory;
-    public UI_Inventory uiInventory;
     public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel;
     public bool canCollect = true;
 
@@ -39,9 +39,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentShotTime = maxShotTime;
-        inventory = new InventoryCtrl(UseItem); //antes estava no awake
-        uiInventory.SetInventory(inventory); //antes estava  no awake
-
+       
         HideInventory();
     }
 
@@ -93,19 +91,25 @@ public class PlayerCtrl : MonoBehaviour
     //    currentShotTime = maxShotTime;
     //}
 
-    private void UseItem(ItensCtrl item)
+    private void UseItem(ItensCtrl inventoryItem)
     {
-        switch (item.itemType)
-        {
-            case ItensCtrl.ItemType.HP_PotionL:
-                PlayerHit(-4);
-                inventory.RemoveItem(item);
-                break;
-            case ItensCtrl.ItemType.HP_PotionS:
-                PlayerHit(-2);
-                inventory.RemoveItem(item);
-                break;
-        }
+        Debug.Log("Use Item: " + inventoryItem);
+        //switch (item.itemType)
+        //{
+        //    case ItensCtrl.ItemType.HP_PotionL:
+        //        PlayerHit(-4);
+        //        inventory.RemoveItem(item);
+        //        break;
+        //    case ItensCtrl.ItemType.HP_PotionS:
+        //        PlayerHit(-2);
+        //        inventory.RemoveItem(item);
+        //        break;
+        //}
+    }
+
+    public InventoryCtrl GetInventory()
+    {
+        return inventory;
     }
 
     public void PlayerHit(int damage)

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using CodeMonkey.Utils;
 
 public class ItemWorld : MonoBehaviour
 {
@@ -18,12 +20,14 @@ public class ItemWorld : MonoBehaviour
 
     private ItensCtrl item;
     private SpriteRenderer sprtRenderer;
+    private TextMeshPro textMeshPro;
 
     [SerializeField] private float vel;
 
     public void Awake()
     {
         sprtRenderer = GetComponent<SpriteRenderer>();
+        textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
     }
 
     void Start()
@@ -36,6 +40,15 @@ public class ItemWorld : MonoBehaviour
     {
         this.item = item;
         sprtRenderer.sprite = item.GetSprite();
+
+        if (item.amount > 1)
+        {
+            textMeshPro.SetText(item.amount.ToString());
+        }
+        else
+        {
+            textMeshPro.SetText("");
+        }
     }
 
     public ItensCtrl GetItem()

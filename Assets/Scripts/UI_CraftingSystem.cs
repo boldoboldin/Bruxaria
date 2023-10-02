@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_CrafitngSystem : MonoBehaviour
+public class UI_CraftingSystem : MonoBehaviour
 {
 
     [SerializeField] private Transform prefabUI_Item;

@@ -22,9 +22,40 @@ public class ItensCtrl
     }
 
     public ItemType itemType;
-    public int amount;
+    public int amount = 1;
+    private IItemHolder itemHolder;
+
+    public void SetItemHolder(IItemHolder itemHolder)
+    {
+        this.itemHolder = itemHolder;
+    }
+
+    public IItemHolder GetItemHolder()
+    {
+        return itemHolder;
+    }
+
+    public void RemoveFromItemHolder()
+    {
+        if (itemHolder != null)
+        {
+            itemHolder.RemoveItem(this);
+        }
+    }
+
+    public void MoveToAnotherItemHolder(IItemHolder newItemHolder)
+    {
+        RemoveFromItemHolder();
+        // Add to new Item Holder
+        newItemHolder.AddItem(this);
+    }
 
     public Sprite GetSprite()
+    {
+        return GetSprite(itemType);
+    }
+    
+    public static Sprite GetSprite(ItemType itemType)
     {
         switch (itemType)
         {
@@ -44,6 +75,11 @@ public class ItensCtrl
     }
 
     public bool IsStackable()
+    {
+        return IsStackable(itemType);
+    }
+
+    public static bool IsStackable (ItemType itemType)
     {
         switch (itemType)
         {

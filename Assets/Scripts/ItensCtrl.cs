@@ -8,6 +8,7 @@ public class ItensCtrl
 {
     public enum ItemType
     {
+        None,
         Ruby,
         Emerald,
         Sapphire,

@@ -25,8 +25,8 @@ public class UI_ItemDrag : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
-        image = transform.Find("image").GetComponent<Image>();
-        amountText = transform.Find("amountText").GetComponent<TextMeshProUGUI>();
+        image = transform.Find("Image").GetComponent<Image>();
+        amountText = transform.Find("AmountText").GetComponent<TextMeshProUGUI>();
         parentRectTransform = transform.parent.GetComponent<RectTransform>();
 
         Hide();

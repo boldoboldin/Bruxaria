@@ -1,9 +1,10 @@
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CraftingSystem
+public class CraftingSystem : IItemHolder
 {
     public const int gridSizeX = 1;
     public const int gridSizeY = 3;
@@ -30,17 +31,17 @@ public class CraftingSystem
 
     }
 
-    private bool IsEmpty(int x, int y)
+    public bool IsEmpty(int x, int y)
     {
         return itemArray[x, y] == null;
     }
 
-    private ItensCtrl GetItem(int x, int y)
+    public ItensCtrl GetItem(int x, int y)
     {
         return itemArray[x, y];
     }
 
-    private void SetItem (ItensCtrl item, int x, int y)
+    public void SetItem (ItensCtrl item, int x, int y)
     {
         if (item != null)
         {
@@ -52,13 +53,13 @@ public class CraftingSystem
         OnGridChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    private void IncreaseItemAMount (int x, int y)
+    public void IncreaseItemAMount (int x, int y)
     {
         GetItem(x, y).amount++;
         OnGridChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    private void DecreaseItemAmount(int x, int y)
+    public void DecreaseItemAmount(int x, int y)
     {
         if (GetItem(x, y) != null)
         {
@@ -71,12 +72,12 @@ public class CraftingSystem
         }
     }
 
-    private void RemoveItem(int x, int y)
+    public void RemoveItem(int x, int y)
     {
         SetItem(null, x, y);
     }
 
-    private bool TryAddItem(ItensCtrl item, int x, int y)
+    public bool TryAddItem(ItensCtrl item, int x, int y)
     {
         if (IsEmpty(x, y))
         {

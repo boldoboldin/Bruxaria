@@ -49,7 +49,7 @@ public class UI_Inventory : MonoBehaviour
         
         int xPos = 0;
         int yPos = 0;
-        float itemSLotCellSize = 156f;
+        float itemSlotCellSize = 156f;
 
         foreach (InventoryCtrl.InventorySlot inventorySlot in inventory.GetInventorySlotArray())
         {
@@ -63,7 +63,7 @@ public class UI_Inventory : MonoBehaviour
                 //inventory.UseItem(item);
             };
 
-            itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSLotCellSize, yPos);
+            itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSlotCellSize, yPos);
 
             if (!inventorySlot.IsEmpty())
             {

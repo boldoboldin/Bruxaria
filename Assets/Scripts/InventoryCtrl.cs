@@ -58,7 +58,7 @@ public class InventoryCtrl : IItemHolder
         OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    public void AddItemMergeAMount(ItensCtrl item)
+    public void AddItemMergeAmount(ItensCtrl item)
     {
         if (item.IsStackable())
         {

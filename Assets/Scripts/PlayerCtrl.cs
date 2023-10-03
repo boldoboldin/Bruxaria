@@ -34,13 +34,18 @@ public class PlayerCtrl : MonoBehaviour
     public bool canCollect = true;
 
 
+    private void Awake() 
+    {
+        inventory = new InventoryCtrl(UseItem, 7);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentShotTime = maxShotTime;
        
-        HideInventory();
+        //HideInventory();
     }
 
     // Update is called once per frame

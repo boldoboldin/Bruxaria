@@ -20,8 +20,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
-        image = transform.Find("image").GetComponent<Image>();
-        amountText = transform.Find("amountText").GetComponent<TextMeshProUGUI>();
+        image = transform.Find("Image").GetComponent<Image>();
+        amountText = transform.Find("AmountTxt").GetComponent<TextMeshProUGUI>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -74,6 +74,7 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
     public void SetSprite(Sprite sprite)
     {
         image.sprite = sprite;
+        Debug.Log("Set UI Sprite");
     }
 
     public void SetAmountText(int amount)
@@ -104,6 +105,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         this.item = item;
         SetSprite(ItensCtrl.GetSprite(item.itemType));
         SetAmountText(item.amount);
+
+        Debug.Log("Set UI Item");
     }
 
 }

@@ -21,6 +21,10 @@ public class InventoryCtrl : IItemHolder
         {
             inventorySlotArray[i] = new InventorySlot(i);
         }
+
+        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Sapphire });
+        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Ruby });
+        AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Emerald });
     }
 
     public InventorySlot GetEmptyInventorySlot()

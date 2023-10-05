@@ -18,16 +18,19 @@ public class UI_CraftingSystem : MonoBehaviour
 
         slotTransformArray = new Transform[CraftingSystem.gridSizeX, CraftingSystem.gridSizeY];
 
-        for (int x = 0; x < CraftingSystem.gridSizeX; x++)
+        int x = 0;
+
+        for (int y = 0; y < CraftingSystem.gridSizeY; y++)
         {
-            for (int y = 0; y < CraftingSystem.gridSizeY; y++)
-            {
-                slotTransformArray[x, y] = gridContainer.Find("Slot[" + x + "_" + y + "]");
-                UI_CraftingSlot craftingSlot = slotTransformArray[x, y].GetComponent<UI_CraftingSlot>();
-                craftingSlot.SetXY(x, y);
-                craftingSlot.OnItemDropped += UI_CraftingSystem_OnItemDropped;
-            }
+            slotTransformArray[x, y] = gridContainer.Find("Slot[" + x + "_" + y + "]");
+            UI_CraftingSlot craftingSlot = slotTransformArray[x, y].GetComponent<UI_CraftingSlot>();
+            craftingSlot.SetXY(x, y);
+            craftingSlot.OnItemDropped += UI_CraftingSystem_OnItemDropped;
+
+            Debug.Log(x);
+            Debug.Log(y);
         }
+        
 
         recipeSlotTransform = transform.Find("RecipeSlot");
 

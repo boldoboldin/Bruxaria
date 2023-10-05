@@ -84,15 +84,11 @@ public class UI_Inventory : MonoBehaviour
                 inventory.AddItem(draggedItem, tmpInventorySlot);
             });
 
-            if (xPos <= 6)
+            
+            int itemRowMax = 6;
+            if (xPos <= itemRowMax)
             {
                 xPos++;
-                player.canCollect = true;
-            }
-            
-            if (xPos > 6)
-            {
-                player.canCollect = false;
             }
         }
     }

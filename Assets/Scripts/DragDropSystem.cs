@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragDropSystem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class DragDropSystem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -37,10 +37,5 @@ public class DragDropSystem : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     public void OnPointerDown(PointerEventData eventData)
     {
         Debug.Log("OnPointerDown");
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("OnDrop");
     }
 }

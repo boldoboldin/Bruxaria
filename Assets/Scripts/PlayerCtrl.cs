@@ -99,16 +99,16 @@ public class PlayerCtrl : MonoBehaviour
     private void UseItem(ItensCtrl inventoryItem)
     {
         Debug.Log("Use Item: " + inventoryItem);
-        //switch (item.itemType)
+        //switch (inventoryItem.itemType)
         //{
         //    case ItensCtrl.ItemType.HP_PotionL:
         //        PlayerHit(-4);
-        //        inventory.RemoveItem(item);
+        //        inventory.RemoveItem(inventoryItem);
         //        break;
         //    case ItensCtrl.ItemType.HP_PotionS:
         //        PlayerHit(-2);
-        //        inventory.RemoveItem(item);
-        //        break;
+        //       inventory.RemoveItem(inventoryItem);
+        //       break;
         //}
     }
 

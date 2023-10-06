@@ -99,6 +99,7 @@ public class UI_CraftingSystem : MonoBehaviour
         RectTransform itemRectTransform = itemTransform.GetComponent<RectTransform>();
         itemRectTransform.anchoredPosition = recipeSlotTransform.GetComponent<RectTransform>().anchoredPosition;
         itemTransform.GetComponent<UI_Item>().SetItem(item);
+
         Debug.Log("Craftou certo");
     }
 }

@@ -29,6 +29,11 @@ public class CraftingSystem : IItemHolder
         recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
         recipeDictionary[ItensCtrl.ItemType.Diamond] = recipe;
 
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
+        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
+        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
+        recipeDictionary[ItensCtrl.ItemType.Onyx] = recipe;
     }
 
     public bool IsEmpty(int x, int y)

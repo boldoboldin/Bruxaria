@@ -344,7 +344,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2417.4, y: 60}
+  m_SizeDelta: {x: 3000, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &172347379
 MonoBehaviour:
@@ -1564,7 +1564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -175.1, y: 22}
+  m_AnchoredPosition: {x: -700, y: 22}
   m_SizeDelta: {x: 660.1324, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1001429593
@@ -1718,7 +1718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -3418,7 +3418,7 @@ PrefabInstance:
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: hudCrafting
       value: 
-      objectReference: {fileID: 1115900274}
+      objectReference: {fileID: 1625719339}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: uiInventory
       value: 
@@ -3434,7 +3434,7 @@ PrefabInstance:
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: hudInventory
       value: 
-      objectReference: {fileID: 1053151899}
+      objectReference: {fileID: 1046429514}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: settingsBttn
       value: 
@@ -3444,6 +3444,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6009862514675644543, guid: 02bb93df787e9714e872178f1ce39258, type: 3}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: hudRecipeSlot
+      value: 
+      objectReference: {fileID: 310017171}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: fullHeartFalling
       value: 
       objectReference: {fileID: 218076694553631690, guid: 589be8ddd7d25e24d8c4acc914168cff, type: 3}
@@ -3451,6 +3455,14 @@ PrefabInstance:
       propertyPath: halfHeartFalling
       value: 
       objectReference: {fileID: 4263077925092972436, guid: 7946abaa32c721d439aff9c985cdc908, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: hudCraftingSlots
+      value: 
+      objectReference: {fileID: 696792116}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: hudInventorySlots
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: quarterHeartFalling
       value: 

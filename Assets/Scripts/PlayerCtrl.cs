@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using CodeMonkey.Utils;
 
 public class PlayerCtrl : MonoBehaviour
@@ -155,8 +156,14 @@ public class PlayerCtrl : MonoBehaviour
 
     public void ShowInventory()
     {
+        
         hudInventory.SetActive(true);
+        
+
+
+        //hudCrafting.SetActive(true);
         hudCrafting.SetActive(true);
+
 
         resumeBttn.SetActive(true);
         settingsBttn.SetActive(true);
@@ -170,7 +177,12 @@ public class PlayerCtrl : MonoBehaviour
 
     public void HideInventory()
     {
+        //hudInventory.SetActive(false);
         hudInventory.SetActive(false);
+        //hudInventorySlots.SetActive(false);
+
+
+        //hudCrafting.SetActive(false);
         hudCrafting.SetActive(false);
 
         resumeBttn.SetActive(false);

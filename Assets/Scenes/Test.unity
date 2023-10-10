@@ -294,8 +294,7 @@ RectTransform:
   m_Children:
   - {fileID: 2098298451}
   - {fileID: 172347378}
-  - {fileID: 1053151900}
-  - {fileID: 1115900275}
+  - {fileID: 642048922}
   - {fileID: 1606185588}
   - {fileID: 1354037935}
   - {fileID: 1096171804}
@@ -915,6 +914,43 @@ RectTransform:
   m_AnchoredPosition: {x: -259.45, y: 143.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.49999955}
+--- !u!1 &642048921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 642048922}
+  m_Layer: 5
+  m_Name: UI_InventoryCrafting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &642048922
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642048921}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1053151900}
+  - {fileID: 1115900275}
+  m_Father: {fileID: 106092430}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2146.6396, y: 692.7719}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &678037833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1623,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.23
+  m_text: 'the_broom_and_her_witch_V.0.0.25
 
 '
   m_isRightToLeft: 0
@@ -1766,18 +1802,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053151899}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1046429515}
   - {fileID: 295520707}
-  m_Father: {fileID: 106092430}
+  m_Father: {fileID: 642048922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -271.8}
+  m_AnchoredPosition: {x: 80.140015, y: -36.77}
   m_SizeDelta: {x: 2146.64, y: 485.84375}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1053151901
@@ -1961,11 +1997,11 @@ RectTransform:
   - {fileID: 310017172}
   - {fileID: 617032722}
   - {fileID: 696792117}
-  m_Father: {fileID: 106092430}
+  m_Father: {fileID: 642048922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -89.8, y: -135.85}
+  m_AnchoredPosition: {x: 86.29, y: 96.3}
   m_SizeDelta: {x: 790, y: 627.80005}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1115900277
@@ -3434,7 +3470,7 @@ PrefabInstance:
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: hudInventory
       value: 
-      objectReference: {fileID: 1046429514}
+      objectReference: {fileID: 642048921}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: settingsBttn
       value: 
@@ -3467,6 +3503,22 @@ PrefabInstance:
       propertyPath: quarterHeartFalling
       value: 
       objectReference: {fileID: 3427699313357390502, guid: 7a824698819c2e6459f9eccbd40a537c, type: 3}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: inventoryHiddenPos.x
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: inventoryHiddenPos.y
+      value: 9000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: inventoryVisiblePos.x
+      value: 1266
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
+      propertyPath: inventoryVisiblePos.y
+      value: 585
+      objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: threeQuartHeartFalling
       value: 

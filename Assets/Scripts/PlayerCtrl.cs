@@ -33,6 +33,8 @@ public class PlayerCtrl : MonoBehaviour
     private InventoryCtrl inventory;
     public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel;
     public bool canCollect = true;
+    [SerializeField] private Vector2 inventoryVisiblePos;
+    [SerializeField] private Vector2 inventoryHiddenPos;
 
 
     private void Awake() 
@@ -156,14 +158,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void ShowInventory()
     {
-        
-        hudInventory.SetActive(true);
-        
-
-
-        //hudCrafting.SetActive(true);
-        hudCrafting.SetActive(true);
-
+        hudInventory.transform.position = inventoryVisiblePos;
 
         resumeBttn.SetActive(true);
         settingsBttn.SetActive(true);
@@ -177,13 +172,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void HideInventory()
     {
-        //hudInventory.SetActive(false);
-        hudInventory.SetActive(false);
-        //hudInventorySlots.SetActive(false);
-
-
-        //hudCrafting.SetActive(false);
-        hudCrafting.SetActive(false);
+        hudInventory.transform.position = inventoryHiddenPos;
 
         resumeBttn.SetActive(false);
         settingsBttn.SetActive(false);

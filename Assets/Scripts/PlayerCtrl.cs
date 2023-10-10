@@ -28,15 +28,13 @@ public class PlayerCtrl : MonoBehaviour
     private float currentShotTime;
     //public string shotType = "null";
 
-
     [Header("Inventory/Crafting Variables")]
+    [SerializeField] private Vector2 inventoryVisiblePos;
+    [SerializeField] private Vector2 inventoryHiddenPos;
     private InventoryCtrl inventory;
     public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel;
     public bool canCollect = true;
-    [SerializeField] private Vector2 inventoryVisiblePos;
-    [SerializeField] private Vector2 inventoryHiddenPos;
-
-
+    
     private void Awake() 
     {
         inventory = new InventoryCtrl(UseItem, 7);
@@ -48,7 +46,7 @@ public class PlayerCtrl : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
         currentShotTime = maxShotTime;
        
-        //HideInventory();
+        HideInventory();
     }
 
     // Update is called once per frame

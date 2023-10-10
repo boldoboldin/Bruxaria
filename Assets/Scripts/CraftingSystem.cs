@@ -11,7 +11,7 @@ public class CraftingSystem : IItemHolder
 
     public event EventHandler OnGridChanged;
 
-    private Dictionary<ItensCtrl.ItemType, ItensCtrl.ItemType[,]> recipeDictionary;
+    private Dictionary<ItensCtrl.ItemType, List<ItensCtrl.ItemType[,]>> recipeDictionary;
 
     private ItensCtrl[,] itemArray;
     private ItensCtrl outputItem;
@@ -20,20 +20,89 @@ public class CraftingSystem : IItemHolder
     {
         itemArray = new ItensCtrl[gridSizeX, gridSizeY];
 
-        recipeDictionary = new Dictionary<ItensCtrl.ItemType, ItensCtrl.ItemType[,]>();
+        recipeDictionary = new Dictionary<ItensCtrl.ItemType, List<ItensCtrl.ItemType[,]>>();
 
-        //Diamond 
+        //Diamond
+        List<ItensCtrl.ItemType[,]> diamondRecipes = new List<ItensCtrl.ItemType[,]>();
+
         ItensCtrl.ItemType[,] recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Ruby;
         recipe[0, 1] = ItensCtrl.ItemType.Emerald;
         recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        recipeDictionary[ItensCtrl.ItemType.Diamond] = recipe;
+        diamondRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
+        diamondRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
+        diamondRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        diamondRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
+        diamondRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        diamondRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Diamond] = diamondRecipes;
+
+        //Onyx
+        List<ItensCtrl.ItemType[,]> onyxRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
         recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
         recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        recipeDictionary[ItensCtrl.ItemType.Onyx] = recipe;
+        onyxRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
+        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
+        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
+        onyxRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
+        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
+        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
+        onyxRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
+        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
+        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
+        onyxRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
+        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
+        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
+        onyxRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
+        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
+        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
+        onyxRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Onyx] = onyxRecipes;
     }
 
     public bool IsEmpty(int x, int y)
@@ -137,28 +206,32 @@ public class CraftingSystem : IItemHolder
     {
         foreach (ItensCtrl.ItemType recipeItemType in recipeDictionary.Keys)
         {
-            ItensCtrl.ItemType[,] recipe = recipeDictionary[recipeItemType];
+            List<ItensCtrl.ItemType[,]> recipeList = recipeDictionary[recipeItemType];
 
-            bool completeRecipe = true;
-            for (int x = 0; x < gridSizeX; x++)
+            foreach (ItensCtrl.ItemType[,] recipe in recipeList)
             {
-                for (int y = 0; y < gridSizeY; y++)
+                bool completeRecipe = true;
+
+                for (int x = 0; x < gridSizeX; x++)
                 {
-                    if (recipe[x, y] != ItensCtrl.ItemType.None)
+                    for (int y = 0; y < gridSizeY; y++)
                     {
-                        // Recipe has Item in this position
-                        if (IsEmpty(x, y) || GetItem(x, y).itemType != recipe[x, y])
+                        if (recipe[x, y] != ItensCtrl.ItemType.None)
                         {
-                            // Empty position or different itemType
-                            completeRecipe = false;
+                            // Recipe has Item in this position
+                            if (IsEmpty(x, y) || GetItem(x, y).itemType != recipe[x, y])
+                            {
+                                // Empty position or different itemType
+                                completeRecipe = false;
+                            }
                         }
                     }
                 }
-            }
 
-            if (completeRecipe)
-            {
-                return recipeItemType;
+                if (completeRecipe)
+                {
+                    return recipeItemType;
+                }
             }
         }
         return ItensCtrl.ItemType.None;

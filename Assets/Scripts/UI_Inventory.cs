@@ -60,7 +60,7 @@ public class UI_Inventory : MonoBehaviour
 
             itemSlotRectTransform.GetComponent<UI_Button>().ClickFunc = () =>
             {
-                //inventory.UseItem(item);
+                inventory.UseItem(item);
             };
 
             itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSlotCellSize, yPos);

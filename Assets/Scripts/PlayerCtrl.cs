@@ -100,17 +100,17 @@ public class PlayerCtrl : MonoBehaviour
     private void UseItem(ItensCtrl inventoryItem)
     {
         Debug.Log("Use Item: " + inventoryItem);
-        //switch (inventoryItem.itemType)
-        //{
-        //    case ItensCtrl.ItemType.HP_PotionL:
-        //        PlayerHit(-4);
-        //        inventory.RemoveItem(inventoryItem);
-        //        break;
-        //    case ItensCtrl.ItemType.HP_PotionS:
-        //        PlayerHit(-2);
-        //       inventory.RemoveItem(inventoryItem);
-        //       break;
-        //}
+        switch (inventoryItem.itemType)
+        {
+            case ItensCtrl.ItemType.HP_PotionL:
+                PlayerHit(-4);
+                inventory.RemoveItem(inventoryItem);
+                break;
+            case ItensCtrl.ItemType.HP_PotionS:
+                PlayerHit(-2);
+               inventory.RemoveItem(inventoryItem);
+               break;
+        }
     }
 
     public InventoryCtrl GetInventory()
@@ -188,7 +188,7 @@ public class PlayerCtrl : MonoBehaviour
 
         if (itemWorld != null && canCollect)
         {
-            inventory.AddItem(itemWorld.GetItem());
+            inventory.AddItem(itemWorld.GetItem()); //olhar aqui mais tarde
             itemWorld.DestroySelf();
         }
     }

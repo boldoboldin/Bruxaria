@@ -794,6 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+  - component: {fileID: 519420033}
   - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
@@ -845,7 +846,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -876,6 +877,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374593f7cb7d9c448a2b2e6144a6a3e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wireColor: {r: 1, g: 1, b: 1, a: 1}
+  UnitsSize: 9.5
+  constraint: 1
+  camera: {fileID: 519420031}
+  executeInUpdate: 1
 --- !u!1 &617032721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,7 +1618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -700, y: 22}
+  m_AnchoredPosition: {x: -814.3, y: 22}
   m_SizeDelta: {x: 660.1324, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1001429593
@@ -1623,7 +1641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.26
+  m_text: 'the_broom_and_her_witch_V.0.0.28
 
 '
   m_isRightToLeft: 0
@@ -1811,11 +1829,11 @@ RectTransform:
   - {fileID: 295520707}
   m_Father: {fileID: 642048922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 80.140015, y: -36.77}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 23.7}
   m_SizeDelta: {x: 2146.64, y: 485.84375}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1053151901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,11 +2017,11 @@ RectTransform:
   - {fileID: 696792117}
   m_Father: {fileID: 642048922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 86.29, y: 96.3}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 95.87}
   m_SizeDelta: {x: 790, y: 627.80005}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &1115900277
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3513,11 +3531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: inventoryVisiblePos.x
-      value: 1266
+      value: 1140
       objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: inventoryVisiblePos.y
-      value: 585
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 5573510451319689801, guid: 08393cbf8cfe19440a36b0a1d06b5341, type: 3}
       propertyPath: threeQuartHeartFalling

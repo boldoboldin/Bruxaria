@@ -97,8 +97,9 @@ public class PlayerCtrl : MonoBehaviour
     //    currentShotTime = maxShotTime;
     //}
 
-    private void UseItem(ItensCtrl inventoryItem)
+    private void UseItem(ItensCtrl item)
     {
+<<<<<<< Updated upstream
         Debug.Log("Use Item: " + inventoryItem);
         switch (inventoryItem.itemType)
         {
@@ -109,6 +110,18 @@ public class PlayerCtrl : MonoBehaviour
             case ItensCtrl.ItemType.HP_PotionS:
                 PlayerHit(-2);
                inventory.RemoveItem(inventoryItem);
+=======
+        Debug.Log("Use Item: " + item);
+        switch (item.itemType)
+        {
+            case ItensCtrl.ItemType.HP_PotionL:
+                PlayerHit(-4);
+                inventory.RemoveItem(item);
+                break;
+            case ItensCtrl.ItemType.HP_PotionS:
+                PlayerHit(-2);
+               inventory.RemoveItem(item);
+>>>>>>> Stashed changes
                break;
         }
     }

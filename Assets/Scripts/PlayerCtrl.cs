@@ -100,19 +100,28 @@ public class PlayerCtrl : MonoBehaviour
 
     private void UseItem(ItensCtrl item)
     {
-
-        Debug.Log("Use Item: " + item);
-        switch (item.itemType)
+        if (inventoryMode == "UseMode")
         {
-            case ItensCtrl.ItemType.HP_PotionL:
-                PlayerHit(-4);
-                inventory.RemoveItem(item);
-                break;
-            case ItensCtrl.ItemType.HP_PotionS:
-                PlayerHit(-2);
-               inventory.RemoveItem(item);
-               break;
+            switch (item.itemType)
+            {
+                case ItensCtrl.ItemType.HP_PotionL:
+                    PlayerHit(-4);
+                    inventory.RemoveItem(item);
+                    break;
+                case ItensCtrl.ItemType.HP_PotionS:
+                    PlayerHit(-2);
+                    inventory.RemoveItem(item);
+                    break;
+            }
         }
+
+        if (inventoryMode == "DelMode")
+        {
+            inventory.RemoveItem(item);
+        }
+
+
+
     }
 
     public InventoryCtrl GetInventory()

@@ -7,6 +7,7 @@ using TMPro;
 
 public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
+    private PlayerCtrl playerCtrl;
 
     private Canvas canvas;
     private RectTransform rectTransform;
@@ -22,6 +23,19 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         canvas = GetComponentInParent<Canvas>();
         image = transform.Find("Image").GetComponent<Image>();
         amountText = transform.Find("AmountTxt").GetComponent<TextMeshProUGUI>();
+        playerCtrl = FindObjectOfType<PlayerCtrl>();
+    }
+
+    private void Update()
+    {
+        if(playerCtrl.inventoryMode == "UseMode" || playerCtrl.inventoryMode == "DelMode")
+        {
+            canvasGroup.blocksRaycasts = false;
+        }
+        else if (playerCtrl.inventoryMode == "OrgMode")
+        {
+            canvasGroup.blocksRaycasts = true;
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)

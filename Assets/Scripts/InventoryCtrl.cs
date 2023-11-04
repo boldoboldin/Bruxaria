@@ -143,7 +143,6 @@ public class InventoryCtrl : IItemHolder
 
     public void UseItem (ItensCtrl item)
     {
-        Debug.Log("Apertou o item?");
         useItemAct(item);
     }
 

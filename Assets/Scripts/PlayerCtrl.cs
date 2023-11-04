@@ -32,8 +32,9 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private Vector2 inventoryVisiblePos;
     [SerializeField] private Vector2 inventoryHiddenPos;
     private InventoryCtrl inventory;
-    public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel;
+    public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel, delBttn, useBttn, resumeDelBttn, resumeUseBttn;
     public bool canCollect = true;
+    public string inventoryMode = "OrgMode";
     
     private void Awake() 
     {
@@ -99,18 +100,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private void UseItem(ItensCtrl item)
     {
-<<<<<<< Updated upstream
-        Debug.Log("Use Item: " + inventoryItem);
-        switch (inventoryItem.itemType)
-        {
-            case ItensCtrl.ItemType.HP_PotionL:
-                PlayerHit(-4);
-                inventory.RemoveItem(inventoryItem);
-                break;
-            case ItensCtrl.ItemType.HP_PotionS:
-                PlayerHit(-2);
-               inventory.RemoveItem(inventoryItem);
-=======
+
         Debug.Log("Use Item: " + item);
         switch (item.itemType)
         {
@@ -121,7 +111,6 @@ public class PlayerCtrl : MonoBehaviour
             case ItensCtrl.ItemType.HP_PotionS:
                 PlayerHit(-2);
                inventory.RemoveItem(item);
->>>>>>> Stashed changes
                break;
         }
     }
@@ -176,6 +165,8 @@ public class PlayerCtrl : MonoBehaviour
         fogPanel.SetActive(true);
         pauseBttn.SetActive(false);
 
+        OrgMode();
+
         canMove = false;
 
         Time.timeScale = 0.1f;
@@ -187,12 +178,46 @@ public class PlayerCtrl : MonoBehaviour
 
         resumeBttn.SetActive(false);
         settingsBttn.SetActive(false);
+        useBttn.SetActive(false);
+        delBttn.SetActive(false);
+        resumeUseBttn.SetActive(false);
+        resumeDelBttn.SetActive(false);
         fogPanel.SetActive(false);
         pauseBttn.SetActive(true);
 
         canMove = true;
 
         Time.timeScale = 1;
+    }
+
+    public void UseMode()
+    {
+        fogPanel.GetComponent<Image>().color = new Color32(168, 202, 88, 100);
+        useBttn.SetActive(false);
+        resumeUseBttn.SetActive(true);
+
+        inventoryMode = "UseMode";
+    }
+
+    public void DelMode()
+    {
+        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 100);
+        delBttn.SetActive(false);
+        resumeDelBttn.SetActive(true);
+
+        inventoryMode = "DelMode";
+    }
+
+    public void OrgMode()
+    {
+        fogPanel.GetComponent<Image>().color = new Color32(250, 250, 250, 100);
+
+        useBttn.SetActive(true);
+        delBttn.SetActive(true);
+        resumeUseBttn.SetActive(false);
+        resumeDelBttn.SetActive(false);
+
+        inventoryMode = "OrgMode";
     }
 
     private void OnTriggerEnter2D(Collider2D other)

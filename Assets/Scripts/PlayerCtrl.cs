@@ -105,12 +105,23 @@ public class PlayerCtrl : MonoBehaviour
             switch (item.itemType)
             {
                 case ItensCtrl.ItemType.HP_PotionL:
-                    PlayerHit(-4);
-                    inventory.RemoveItem(item);
+                    
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-4);
+                        inventory.RemoveItem(item);
+                    }
+
                     break;
+
                 case ItensCtrl.ItemType.HP_PotionS:
-                    PlayerHit(-2);
-                    inventory.RemoveItem(item);
+
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-2);
+                        inventory.RemoveItem(item);
+                    }
+
                     break;
             }
         }
@@ -154,6 +165,11 @@ public class PlayerCtrl : MonoBehaviour
         }
 
         OnPlayerDamage?.Invoke();
+
+        if (hp >= maxHP)
+        {
+            hp = maxHP;
+        }
 
         if (hp <= 0)
         {
@@ -201,7 +217,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void UseMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(168, 202, 88, 100);
+        fogPanel.GetComponent<Image>().color = new Color32(168, 202, 88, 150);
         useBttn.SetActive(false);
         resumeUseBttn.SetActive(true);
 
@@ -210,7 +226,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void DelMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 100);
+        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 150);
         delBttn.SetActive(false);
         resumeDelBttn.SetActive(true);
 
@@ -219,7 +235,7 @@ public class PlayerCtrl : MonoBehaviour
 
     public void OrgMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(250, 250, 250, 100);
+        fogPanel.GetComponent<Image>().color = new Color32(250, 250, 250, 150);
 
         useBttn.SetActive(true);
         delBttn.SetActive(true);

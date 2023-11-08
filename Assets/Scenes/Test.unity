@@ -1652,8 +1652,8 @@ MonoBehaviour:
   - {fileID: 3279311496138028329, guid: 001c879159765fe498b01ba5353e21f8, type: 3}
   - {fileID: 8668623396113080422, guid: abd83cdd384d7d047af38da64fbf5634, type: 3}
   - {fileID: 3394749724867990640, guid: 40adaa1678f0ed849b0c7cb47a82f12d, type: 3}
-  mimSpawTime: 1
-  maxSpawTime: 1
+  mimSpawTime: 3
+  maxSpawTime: 5
 --- !u!4 &883228070
 Transform:
   m_ObjectHideFlags: 0
@@ -1982,9 +1982,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 2681592691064974891, guid: 60efa063850c6814b8d795e0d9415302, type: 3}
   - {fileID: 2681592691064974891, guid: 642808dd1a6cbeb41b4338153663f637, type: 3}
-  - {fileID: 2681592691064974891, guid: 86507b264f5d6fc4eba31cff5f3c71d9, type: 3}
   mimSpawTime: 2
-  maxSpawTime: 5
+  maxSpawTime: 4
 --- !u!1 &1001429591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2452,7 +2451,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 155481142, guid: 9075036ae4404b74d82c9205ffd86e33, type: 3}
+    m_PressedSprite: {fileID: -1898102951, guid: d62f491b333ea084b8db482598ea560f, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -2498,7 +2497,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -864297284, guid: 9075036ae4404b74d82c9205ffd86e33, type: 3}
+  m_Sprite: {fileID: -837073916, guid: d62f491b333ea084b8db482598ea560f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4082,7 +4081,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -1457090787, guid: a39acb17c21792f41b016ab19d1aed4a, type: 3}
+    m_PressedSprite: {fileID: -1025203555, guid: 27b3cb9002e08b74699098bc3dd25f58, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4128,7 +4127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -987929872, guid: a39acb17c21792f41b016ab19d1aed4a, type: 3}
+  m_Sprite: {fileID: 891978455, guid: 27b3cb9002e08b74699098bc3dd25f58, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

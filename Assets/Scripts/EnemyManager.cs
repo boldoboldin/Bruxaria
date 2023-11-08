@@ -33,7 +33,7 @@ public class EnemyManager : MonoBehaviour
             float posY = Random.Range(-3.5f, 3.5f);
             Vector3 spawPos = new Vector2(10, posY);
 
-            int enemyType = Random.Range(0, 3);
+            int enemyType = Random.Range(0, 2);
 
             GameObject enemy = Instantiate(enemies[enemyType], spawPos, Quaternion.identity);
             Destroy(enemy, 5f);

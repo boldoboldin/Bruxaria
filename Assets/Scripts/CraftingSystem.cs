@@ -349,6 +349,217 @@ public class CraftingSystem : IItemHolder
         sapphireRecipes.Add(recipe);
 
         recipeDictionary[ItensCtrl.ItemType.Sapphire] = sapphireRecipes;
+
+        //Heart Recipes
+        List<ItensCtrl.ItemType[,]> heartRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.HeartPiece;
+        recipe[0, 1] = ItensCtrl.ItemType.HeartPiece;
+        recipe[0, 2] = ItensCtrl.ItemType.HeartPiece;
+        heartRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Heart] = heartRecipes;
+
+        //HP Potion S
+        List<ItensCtrl.ItemType[,]> hpPotionS_Recipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.Apple;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Apple;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Apple;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Apple;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.Apple;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Apple;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.RedMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.RedMushroom;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.RedMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.RedMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.RedMushroom;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.RedMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        hpPotionS_Recipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.HP_PotionS] = hpPotionS_Recipes;
+
+        //HP Potion L
+        List<ItensCtrl.ItemType[,]> hpPotionL_Recipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.HP_PotionS;
+        recipe[0, 1] = ItensCtrl.ItemType.HP_PotionS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        hpPotionL_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.HP_PotionS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.HP_PotionS;
+        hpPotionL_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.HP_PotionS;
+        recipe[0, 2] = ItensCtrl.ItemType.HP_PotionS;
+        hpPotionL_Recipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.HP_PotionL] = hpPotionL_Recipes;
+
+        //Gold Potion S
+        List<ItensCtrl.ItemType[,]> goldPotionS_Recipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldApple;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldApple;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldApple;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldApple;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldApple;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldApple;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldMushroom;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldMushroom;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        goldPotionS_Recipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.GoldPotionS] = goldPotionS_Recipes;
+
+        //Gold Potion L
+        List<ItensCtrl.ItemType[,]> goldPotionL_Recipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldPotionS;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldPotionS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        goldPotionL_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldPotionS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldPotionS;
+        goldPotionL_Recipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldPotionS;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldPotionS;
+        goldPotionL_Recipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.GoldPotionL] = goldPotionL_Recipes;
     }
 
     public bool IsEmpty(int x, int y)

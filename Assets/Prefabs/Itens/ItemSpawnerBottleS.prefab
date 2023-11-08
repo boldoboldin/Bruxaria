@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5416440664911815191}
   - component: {fileID: 844641299100345549}
   m_Layer: 0
-  m_Name: ItemSpawnerHP_PotionS
+  m_Name: ItemSpawnerBottleS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -290877187, guid: 307168f968a132a4ea4de2fe3980e06d, type: 3}
+  m_Sprite: {fileID: 161500780, guid: 307168f968a132a4ea4de2fe3980e06d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-    itemType: 12
+    itemType: 14
     amount: 1

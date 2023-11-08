@@ -102,26 +102,78 @@ public class PlayerCtrl : MonoBehaviour
     {
         if (inventoryMode == "UseMode")
         {
+            // Itens func
             switch (item.itemType)
             {
+                case ItensCtrl.ItemType.Heart:
+                    maxHP += 4;
+                    PlayerHit(-4); //1
+                    inventory.RemoveItem(item);
+                    break;
+
                 case ItensCtrl.ItemType.HP_PotionL:
-                    
                     if (hp < maxHP)
                     {
-                        PlayerHit(-4);
+                        PlayerHit(-10); //2.5
                         inventory.RemoveItem(item);
                     }
-
                     break;
 
                 case ItensCtrl.ItemType.HP_PotionS:
-
                     if (hp < maxHP)
                     {
-                        PlayerHit(-2);
+                        PlayerHit(-4); //1
                         inventory.RemoveItem(item);
                     }
+                    break;
 
+                case ItensCtrl.ItemType.GoldPotionL:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(28); //7
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+
+                case ItensCtrl.ItemType.GoldPotionS:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-12); //3
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+
+                case ItensCtrl.ItemType.Apple:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-2); //0.5
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+                case ItensCtrl.ItemType.GoldApple:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-4); //1
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+                case ItensCtrl.ItemType.RedMushroom:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-2); //0.5
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+                case ItensCtrl.ItemType.GoldMushroom:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(-4); //1
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+                case ItensCtrl.ItemType.RottenApple:
+                        PlayerHit(2); //0.5
+                        inventory.RemoveItem(item);
                     break;
             }
         }
@@ -130,9 +182,6 @@ public class PlayerCtrl : MonoBehaviour
         {
             inventory.RemoveItem(item);
         }
-
-
-
     }
 
     public InventoryCtrl GetInventory()
@@ -251,7 +300,7 @@ public class PlayerCtrl : MonoBehaviour
 
         if (itemWorld != null && canCollect)
         {
-            inventory.AddItem(itemWorld.GetItem()); //olhar aqui mais tarde
+            inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
         }
     }

@@ -31,7 +31,7 @@ public class EnemyManager : MonoBehaviour
             currentSpawTime = Random.Range(mimSpawTime, maxSpawTime);
 
             float posY = Random.Range(-3.5f, 3.5f);
-            Vector3 spawPos = new Vector2(10, posY);
+            Vector3 spawPos = new Vector2(15, posY);
 
             int enemyType = Random.Range(0, 2);
 

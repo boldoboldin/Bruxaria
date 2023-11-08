@@ -3340,8 +3340,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 2681592691064974891, guid: 60efa063850c6814b8d795e0d9415302, type: 3}
   - {fileID: 2681592691064974891, guid: 642808dd1a6cbeb41b4338153663f637, type: 3}
-  mimSpawTime: 2
-  maxSpawTime: 4
+  mimSpawTime: 1
+  maxSpawTime: 5
 --- !u!1 &1001429591
 GameObject:
   m_ObjectHideFlags: 0
@@ -7298,8 +7298,8 @@ SceneRoots:
   - {fileID: 1125251222}
   - {fileID: 5573510451720414603}
   - {fileID: 106092430}
+  - {fileID: 1982483617}
   - {fileID: 984376005}
   - {fileID: 883228070}
   - {fileID: 1189764462}
   - {fileID: 773758846}
-  - {fileID: 1982483617}

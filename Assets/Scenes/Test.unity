@@ -3399,7 +3399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.35
+  m_text: 'the_broom_and_her_witch_V.0.0.37
 
 '
   m_isRightToLeft: 0
@@ -4288,6 +4288,8 @@ MonoBehaviour:
   appleSprt: {fileID: -1464560365, guid: 458ba649846ed9f4180da69ba859c60a, type: 3}
   goldAppleSprt: {fileID: 1153293546, guid: 458ba649846ed9f4180da69ba859c60a, type: 3}
   rottenAppleSprt: {fileID: -1006831721, guid: 458ba649846ed9f4180da69ba859c60a, type: 3}
+  woodShieldSprt: {fileID: -576863808, guid: 637e671a3a40b7e42bcd2dff776bd890, type: 3}
+  ironShieldSprt: {fileID: 837857657, guid: 637e671a3a40b7e42bcd2dff776bd890, type: 3}
 --- !u!4 &1189764462
 Transform:
   m_ObjectHideFlags: 0

@@ -560,6 +560,51 @@ public class CraftingSystem : IItemHolder
         goldPotionL_Recipes.Add(recipe);
 
         recipeDictionary[ItensCtrl.ItemType.GoldPotionL] = goldPotionL_Recipes;
+
+        //Boomerang
+        List<ItensCtrl.ItemType[,]> boomerangRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        boomerangRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Boomerang] = boomerangRecipes;
+
+        //Wood Shild
+        List<ItensCtrl.ItemType[,]> woodShieldRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        woodShieldRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        woodShieldRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        woodShieldRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.WoodShield] = woodShieldRecipes;
+
+        //Iron Shild
+        List<ItensCtrl.ItemType[,]> ironShieldRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        ironShieldRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.IronShield] = ironShieldRecipes;
     }
 
     public bool IsEmpty(int x, int y)

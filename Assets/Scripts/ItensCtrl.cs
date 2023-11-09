@@ -36,6 +36,10 @@ public class ItensCtrl
         Apple,
         GoldApple,
         RottenApple,
+        Iron,
+        WoodShield,
+        IronShield,
+        Boomerang,
     }
 
     public ItemType itemType;
@@ -104,6 +108,9 @@ public class ItensCtrl
             case ItemType.Apple: return ItensAsset.Instance.appleSprt;
             case ItemType.GoldApple: return ItensAsset.Instance.goldAppleSprt;
             case ItemType.RottenApple: return ItensAsset.Instance.rottenAppleSprt;
+
+            case ItemType.WoodShield: return ItensAsset.Instance.woodShieldSprt;
+            case ItemType.IronShield: return ItensAsset.Instance.ironShieldSprt;
         }
     }
 
@@ -145,6 +152,9 @@ public class ItensCtrl
 
             case ItemType.HeartPiece:
             case ItemType.Heart:
+
+            case ItemType.WoodShield:
+            case ItemType.IronShield:
                 return false;
         }
     }

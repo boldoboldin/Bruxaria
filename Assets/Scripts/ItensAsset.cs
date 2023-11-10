@@ -43,4 +43,11 @@ public class ItensAsset : MonoBehaviour
 
     public Sprite woodShieldSprt;
     public Sprite ironShieldSprt;
+
+    public Sprite boomerangSprt;
+
+    public Sprite goldRingSprt;
+    public Sprite fireRingSprt;
+
+    public Sprite goldSprt;
 }

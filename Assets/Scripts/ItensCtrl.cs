@@ -40,6 +40,12 @@ public class ItensCtrl
         WoodShield,
         IronShield,
         Boomerang,
+        GoldRing,
+        FireRing,
+
+        Gold,
+
+         
     }
 
     public ItemType itemType;
@@ -111,6 +117,13 @@ public class ItensCtrl
 
             case ItemType.WoodShield: return ItensAsset.Instance.woodShieldSprt;
             case ItemType.IronShield: return ItensAsset.Instance.ironShieldSprt;
+
+            case ItemType.Boomerang: return ItensAsset.Instance.boomerangSprt;
+
+            case ItemType.GoldRing: return ItensAsset.Instance.goldRingSprt;
+            case ItemType.FireRing: return ItensAsset.Instance.fireRingSprt;
+
+            case ItemType.Gold: return ItensAsset.Instance.goldSprt;
         }
     }
 

@@ -2828,6 +2828,8 @@ MonoBehaviour:
   - {fileID: 3279311496138028329, guid: afd1a802a976a5a4aa18c57ce886c954, type: 3}
   - {fileID: 3279311496138028329, guid: ee6d3035f43fcaa4b887724b36a54c58, type: 3}
   - {fileID: 3394749724867990640, guid: a5497434b5b5fe7419698c6703f76f5e, type: 3}
+  - {fileID: 3279311496138028329, guid: df33edb6f329e6745a2b7ddb0666bf58, type: 3}
+  - {fileID: 2811302104808218818, guid: 94bc02bcb54a78b4e88031d1b7e67679, type: 3}
   mimSpawTime: 7
   maxSpawTime: 14
 --- !u!4 &883228070
@@ -3340,7 +3342,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 2681592691064974891, guid: 60efa063850c6814b8d795e0d9415302, type: 3}
   - {fileID: 2681592691064974891, guid: 642808dd1a6cbeb41b4338153663f637, type: 3}
-  mimSpawTime: 1
+  mimSpawTime: 0.5
   maxSpawTime: 5
 --- !u!1 &1001429591
 GameObject:
@@ -3399,7 +3401,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.37
+  m_text: 'the_broom_and_her_witch_V.0.0.38
 
 '
   m_isRightToLeft: 0
@@ -4290,6 +4292,10 @@ MonoBehaviour:
   rottenAppleSprt: {fileID: -1006831721, guid: 458ba649846ed9f4180da69ba859c60a, type: 3}
   woodShieldSprt: {fileID: -576863808, guid: 637e671a3a40b7e42bcd2dff776bd890, type: 3}
   ironShieldSprt: {fileID: 837857657, guid: 637e671a3a40b7e42bcd2dff776bd890, type: 3}
+  boomerangSprt: {fileID: 21300000, guid: a8143593200b8414ea4faa29ecaea874, type: 3}
+  goldRingSprt: {fileID: -699108968, guid: c599470bfb924c84397d6e9d7a0fb1cb, type: 3}
+  fireRingSprt: {fileID: -257847193, guid: c599470bfb924c84397d6e9d7a0fb1cb, type: 3}
+  goldSprt: {fileID: 1389388214, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
 --- !u!4 &1189764462
 Transform:
   m_ObjectHideFlags: 0

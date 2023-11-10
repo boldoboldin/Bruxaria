@@ -107,7 +107,7 @@ public class PlayerCtrl : MonoBehaviour
             {
                 case ItensCtrl.ItemType.Heart:
                     maxHP += 4;
-                    PlayerHit(-4); //1
+                    PlayerHit(0); //1
                     inventory.RemoveItem(item);
                     break;
 

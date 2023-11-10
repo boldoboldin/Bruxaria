@@ -605,6 +605,58 @@ public class CraftingSystem : IItemHolder
         ironShieldRecipes.Add(recipe);
 
         recipeDictionary[ItensCtrl.ItemType.IronShield] = ironShieldRecipes;
+
+        //GoldRing
+        List<ItensCtrl.ItemType[,]> goldRingRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Gold;
+        recipe[0, 1] = ItensCtrl.ItemType.Gold;
+        recipe[0, 2] = ItensCtrl.ItemType.Gold;
+        goldRingRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.GoldRing] = goldRingRecipes;
+
+        //FireRing
+        List<ItensCtrl.ItemType[,]> fireRingRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldRing;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        fireRingRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GoldRing;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        fireRingRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldRing;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        fireRingRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldRing;
+        fireRingRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.GoldRing;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        fireRingRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.GoldRing;
+        fireRingRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.FireRing] = fireRingRecipes;
     }
 
     public bool IsEmpty(int x, int y)

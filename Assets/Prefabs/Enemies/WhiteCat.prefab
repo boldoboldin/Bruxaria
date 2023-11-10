@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   str: 2
-  vel: 6.5
+  vel: 7
   status: null
   explosionFX: {fileID: 0}
 --- !u!1 &2681592691114471986

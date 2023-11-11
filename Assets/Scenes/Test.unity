@@ -2830,6 +2830,7 @@ MonoBehaviour:
   - {fileID: 3394749724867990640, guid: a5497434b5b5fe7419698c6703f76f5e, type: 3}
   - {fileID: 3279311496138028329, guid: df33edb6f329e6745a2b7ddb0666bf58, type: 3}
   - {fileID: 2811302104808218818, guid: 94bc02bcb54a78b4e88031d1b7e67679, type: 3}
+  - {fileID: 3279311496138028329, guid: 71a0568aa37ed104087f240434a67828, type: 3}
   mimSpawTime: 7
   maxSpawTime: 14
 --- !u!4 &883228070
@@ -3401,7 +3402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.38
+  m_text: 'the_broom_and_her_witch_V.0.0.39
 
 '
   m_isRightToLeft: 0
@@ -4266,7 +4267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabItemWorld: {fileID: 571693158503492585, guid: fd6197546159ff44cbc801a155c8e272, type: 3}
-  rubySprt: {fileID: 1547440776, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
+  rubySprt: {fileID: -1975100467, guid: fa7bb02d1a2d89247bf17e0a4b275552, type: 3}
   emeraldSprt: {fileID: 2147192556, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
   sapphireSprt: {fileID: -208733574, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
   tourmalineSprt: {fileID: 2064632698, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
@@ -4283,7 +4284,7 @@ MonoBehaviour:
   heartPieceSprt: {fileID: -1799888379, guid: b1423b49d0cd3eb4296330f51614c91c, type: 3}
   heartSprt: {fileID: 143281173, guid: b1423b49d0cd3eb4296330f51614c91c, type: 3}
   woodSprt: {fileID: 21300000, guid: 2e44ada1cf807114b9f767b3a1715b89, type: 3}
-  stoneSprt: {fileID: 21300000, guid: fa7bb02d1a2d89247bf17e0a4b275552, type: 3}
+  stoneSprt: {fileID: -1326308313, guid: fa7bb02d1a2d89247bf17e0a4b275552, type: 3}
   redMushroomSprt: {fileID: -1637082484, guid: 6a76cb166d9c6ea4f9b7f1b444446f84, type: 3}
   blueMushroomSprt: {fileID: 1173252172, guid: 6a76cb166d9c6ea4f9b7f1b444446f84, type: 3}
   goldMushroomSprt: {fileID: -1488476719, guid: 6a76cb166d9c6ea4f9b7f1b444446f84, type: 3}
@@ -4295,7 +4296,8 @@ MonoBehaviour:
   boomerangSprt: {fileID: 21300000, guid: a8143593200b8414ea4faa29ecaea874, type: 3}
   goldRingSprt: {fileID: -699108968, guid: c599470bfb924c84397d6e9d7a0fb1cb, type: 3}
   fireRingSprt: {fileID: -257847193, guid: c599470bfb924c84397d6e9d7a0fb1cb, type: 3}
-  goldSprt: {fileID: 1389388214, guid: 2f54f3656aeb7784984192669dbb60ad, type: 3}
+  goldSprt: {fileID: 166447354, guid: fa7bb02d1a2d89247bf17e0a4b275552, type: 3}
+  ironSprt: {fileID: 278658441, guid: fa7bb02d1a2d89247bf17e0a4b275552, type: 3}
 --- !u!4 &1189764462
 Transform:
   m_ObjectHideFlags: 0

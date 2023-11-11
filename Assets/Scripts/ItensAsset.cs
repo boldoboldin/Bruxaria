@@ -50,4 +50,5 @@ public class ItensAsset : MonoBehaviour
     public Sprite fireRingSprt;
 
     public Sprite goldSprt;
+    public Sprite ironSprt;
 }

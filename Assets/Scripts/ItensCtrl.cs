@@ -124,6 +124,8 @@ public class ItensCtrl
             case ItemType.FireRing: return ItensAsset.Instance.fireRingSprt;
 
             case ItemType.Gold: return ItensAsset.Instance.goldSprt;
+            case ItemType.Iron: return ItensAsset.Instance.ironSprt;
+
         }
     }
 

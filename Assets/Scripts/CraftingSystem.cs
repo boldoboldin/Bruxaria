@@ -578,17 +578,17 @@ public class CraftingSystem : IItemHolder
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Wood;
         recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Iron;
         woodShieldRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Iron;
         recipe[0, 2] = ItensCtrl.ItemType.Wood;
         woodShieldRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 0] = ItensCtrl.ItemType.Iron;
         recipe[0, 1] = ItensCtrl.ItemType.Wood;
         recipe[0, 2] = ItensCtrl.ItemType.Wood;
         woodShieldRecipes.Add(recipe);
@@ -599,9 +599,9 @@ public class CraftingSystem : IItemHolder
         List<ItensCtrl.ItemType[,]> ironShieldRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        recipe[0, 0] = ItensCtrl.ItemType.Iron;
+        recipe[0, 1] = ItensCtrl.ItemType.Iron;
+        recipe[0, 2] = ItensCtrl.ItemType.Iron;
         ironShieldRecipes.Add(recipe);
 
         recipeDictionary[ItensCtrl.ItemType.IronShield] = ironShieldRecipes;

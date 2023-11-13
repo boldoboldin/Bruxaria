@@ -31,6 +31,7 @@ public class PlayerCtrl : MonoBehaviour
     [Header("Inventory/Crafting Variables")]
     [SerializeField] private Vector2 inventoryVisiblePos;
     [SerializeField] private Vector2 inventoryHiddenPos;
+    [SerializeField] private Animator paternAnim;
     private InventoryCtrl inventory;
     public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel, delBttn, useBttn, resumeDelBttn, resumeUseBttn;
     public bool canCollect = true;
@@ -266,30 +267,43 @@ public class PlayerCtrl : MonoBehaviour
 
     public void UseMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(168, 202, 88, 150);
+        fogPanel.GetComponent<Image>().color = new Color32(168, 202, 88, 200);
         useBttn.SetActive(false);
         resumeUseBttn.SetActive(true);
+        delBttn.SetActive(true);
+        resumeDelBttn.SetActive(false);
+
+        paternAnim.SetBool("UseMode", true);
+        paternAnim.SetBool("DelMode", false);
 
         inventoryMode = "UseMode";
     }
 
     public void DelMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 150);
+        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 200);
+        useBttn.SetActive(true);
+        resumeUseBttn.SetActive(false);
         delBttn.SetActive(false);
         resumeDelBttn.SetActive(true);
+        
+        paternAnim.SetBool("UseMode", false);
+        paternAnim.SetBool("DelMode", true);
 
         inventoryMode = "DelMode";
     }
 
     public void OrgMode()
     {
-        fogPanel.GetComponent<Image>().color = new Color32(250, 250, 250, 150);
+        fogPanel.GetComponent<Image>().color = new Color32(222, 158, 65, 200);
 
         useBttn.SetActive(true);
         delBttn.SetActive(true);
         resumeUseBttn.SetActive(false);
         resumeDelBttn.SetActive(false);
+
+        paternAnim.SetBool("UseMode", false);
+        paternAnim.SetBool("DelMode", false);
 
         inventoryMode = "OrgMode";
     }

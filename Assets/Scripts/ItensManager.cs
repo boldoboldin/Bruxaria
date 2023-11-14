@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ItensManager : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> itensSpawners;
+    [SerializeField] private List<GameObject> commonItemsSpawners;
+    [SerializeField] private List<GameObject> uncommonItensSpawners;
+    [SerializeField] private List<GameObject> rareItensSpawners;
 
     [SerializeField] private float mimSpawTime;
     [SerializeField] private float maxSpawTime;
@@ -33,9 +35,25 @@ public class ItensManager : MonoBehaviour
             float posY = Random.Range(-3.5f, 3.5f);
             Vector3 spawPos = new Vector2(10, posY);
 
-            int itemType = Random.Range(0, 13);
+            int itemType;
 
-            GameObject item = Instantiate(itensSpawners[itemType], spawPos, Quaternion.identity);
+            int rarity = Random.Range(0, 100);
+
+            if(rarity < 50) //Spaw Common Item
+            {
+                itemType = Random.Range(0, commonItemsSpawners.Count);
+                GameObject item = Instantiate(commonItemsSpawners[itemType], spawPos, Quaternion.identity);
+            }
+            if (rarity >= 50 && rarity < 90) //Spaw Uncommon Item
+            {
+                itemType = Random.Range(0, uncommonItensSpawners.Count);
+                GameObject item = Instantiate(uncommonItensSpawners[itemType], spawPos, Quaternion.identity);
+            }
+            if (rarity >= 90) //Spaw Rare Item
+            {
+                itemType = Random.Range(0, rareItensSpawners.Count);
+                GameObject item = Instantiate(rareItensSpawners[itemType], spawPos, Quaternion.identity);
+            }
         }
     }
 }

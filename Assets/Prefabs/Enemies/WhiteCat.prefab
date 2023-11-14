@@ -5045,7 +5045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 4
-  str: 2
+  str: 4
   vel: 7
   status: null
   explosionFX: {fileID: 0}

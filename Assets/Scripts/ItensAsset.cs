@@ -51,4 +51,14 @@ public class ItensAsset : MonoBehaviour
 
     public Sprite goldSprt;
     public Sprite ironSprt;
+
+    public Sprite bowSprt;
+    public Sprite arrowSprt;
+    public Sprite poisonArrowSprt;
+    public Sprite flamingArrowSprt;
+    public Sprite frozenArrowSprt;
+
+    public Sprite poisonSprt;
+
+    public Sprite greenMushroomSprt;
 }

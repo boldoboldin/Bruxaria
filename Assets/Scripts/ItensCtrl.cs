@@ -45,7 +45,14 @@ public class ItensCtrl
 
         Gold,
 
-         
+        Bow,
+        Arrow,
+        PoisonArrow,
+        FlamingArrow,
+        FrozenArrow,
+
+        Poison,
+        GreenMushroom,
     }
 
     public ItemType itemType;
@@ -125,6 +132,15 @@ public class ItensCtrl
 
             case ItemType.Gold: return ItensAsset.Instance.goldSprt;
             case ItemType.Iron: return ItensAsset.Instance.ironSprt;
+
+            case ItemType.Bow: return ItensAsset.Instance.bowSprt;
+            case ItemType.Arrow: return ItensAsset.Instance.arrowSprt;
+            case ItemType.PoisonArrow: return ItensAsset.Instance.poisonArrowSprt;
+            case ItemType.FlamingArrow: return ItensAsset.Instance.flamingArrowSprt;
+            case ItemType.FrozenArrow: return ItensAsset.Instance.frozenArrowSprt;
+
+            case ItemType.Poison: return ItensAsset.Instance.poisonSprt;
+            case ItemType.GreenMushroom: return ItensAsset.Instance.greenMushroomSprt;
 
         }
     }

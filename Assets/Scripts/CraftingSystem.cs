@@ -461,6 +461,83 @@ public class CraftingSystem : IItemHolder
 
         recipeDictionary[ItensCtrl.ItemType.HP_PotionL] = hpPotionL_Recipes;
 
+        //Poison
+        List<ItensCtrl.ItemType[,]> poisonRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.RottenApple;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.RottenApple;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.RottenApple;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.RottenApple;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.RottenApple;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.RottenApple;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.GreenMushroom;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
+        recipe[0, 2] = ItensCtrl.ItemType.GreenMushroom;
+        poisonRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
+        poisonRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Poison] = poisonRecipes;
+
         //Gold Potion S
         List<ItensCtrl.ItemType[,]> goldPotionS_Recipes = new List<ItensCtrl.ItemType[,]>();
 
@@ -657,7 +734,303 @@ public class CraftingSystem : IItemHolder
         fireRingRecipes.Add(recipe);
 
         recipeDictionary[ItensCtrl.ItemType.FireRing] = fireRingRecipes;
+
+        //Bow
+        List<ItensCtrl.ItemType[,]> bowRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.BlueMushroom;
+        bowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.BlueMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        bowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.BlueMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        bowRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Bow] = bowRecipes;
+
+        //Arrow
+        List<ItensCtrl.ItemType[,]> arrowRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        arrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        arrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        arrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        arrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        arrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        arrowRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Arrow] = arrowRecipes;
+
+        //Poison Arrow
+        List<ItensCtrl.ItemType[,]> poisonArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Poison;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Poison;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Poison;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Poison;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Poison;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Poison;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.Poison;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Poison;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Poison;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Poison;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.Poison;
+        poisonArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Poison;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        poisonArrowRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.PoisonArrow] = poisonArrowRecipes;
+
+        //Flaming Arrow
+        List<ItensCtrl.ItemType[,]> flamingArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
+        flamingArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        flamingArrowRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.FlamingArrow] = flamingArrowRecipes;
+
+        //Frozen Arrow
+        List<ItensCtrl.ItemType[,]> frozenArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.None;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 1] = ItensCtrl.ItemType.None;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
+        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
+        frozenArrowRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.None;
+        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
+        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
+        frozenArrowRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.FrozenArrow] = frozenArrowRecipes;
     }
+
 
     public bool IsEmpty(int x, int y)
     {

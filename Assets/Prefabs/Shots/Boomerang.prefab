@@ -155,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotSpd: 7
   shotStr: 4
-  shotImpactXF: {fileID: 0}
+  shotImpactXF: {fileID: 8668623396113080422, guid: abd83cdd384d7d047af38da64fbf5634, type: 3}
 --- !u!50 &375704866132867664
 Rigidbody2D:
   serializedVersion: 4

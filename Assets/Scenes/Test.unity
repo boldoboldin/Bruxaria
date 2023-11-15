@@ -3692,11 +3692,10 @@ MonoBehaviour:
   - {fileID: 3394749724867990640, guid: a5497434b5b5fe7419698c6703f76f5e, type: 3}
   - {fileID: 3279311496138028329, guid: 5e417a4de2c239c41850eb803196942e, type: 3}
   - {fileID: 3279311496138028329, guid: 71a0568aa37ed104087f240434a67828, type: 3}
-  - {fileID: 3279311496138028329, guid: 56170a1b3e5000340b24569f9ebdaef8, type: 3}
+  - {fileID: 3279311496138028329, guid: d5fff1ac8c1cd0a49af3696dcf5a043d, type: 3}
   rareItensSpawners:
-  - {fileID: 3279311496138028329, guid: 6c1877f9868c4ce4eb1a1e6c765dc8c7, type: 3}
-  - {fileID: 3279311496138028329, guid: ee6d3035f43fcaa4b887724b36a54c58, type: 3}
   - {fileID: 3279311496138028329, guid: df33edb6f329e6745a2b7ddb0666bf58, type: 3}
+  - {fileID: 3279311496138028329, guid: 6c1877f9868c4ce4eb1a1e6c765dc8c7, type: 3}
   mimSpawTime: 3
   maxSpawTime: 9
 --- !u!4 &883228070
@@ -4344,7 +4343,7 @@ MonoBehaviour:
   - {fileID: 2681592691064974891, guid: 60efa063850c6814b8d795e0d9415302, type: 3}
   - {fileID: 2681592691064974891, guid: 642808dd1a6cbeb41b4338153663f637, type: 3}
   - {fileID: 6157620404185983634, guid: 791fb1d7f1c96dd4581d5a8729214642, type: 3}
-  mimSpawTime: 0.5
+  mimSpawTime: 0.1
   maxSpawTime: 5
 --- !u!1 &1001429591
 GameObject:
@@ -4403,7 +4402,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the_broom_and_her_witch_V.0.0.40
+  m_text: 'the_broom_and_her_witch_V.0.0.44
 
 '
   m_isRightToLeft: 0
@@ -5439,7 +5438,8 @@ MonoBehaviour:
   flamingArrowSprt: {fileID: 1537779081, guid: 250b1a9605d93ea438f0f9f7f47dc8eb, type: 3}
   frozenArrowSprt: {fileID: -1219567011, guid: 250b1a9605d93ea438f0f9f7f47dc8eb, type: 3}
   poisonSprt: {fileID: -1803985417, guid: 307168f968a132a4ea4de2fe3980e06d, type: 3}
-  greenMushroomSprt: {fileID: 0}
+  purpleMushroomSprt: {fileID: 546288342, guid: 6a76cb166d9c6ea4f9b7f1b444446f84, type: 3}
+  ballOfWoolSprt: {fileID: 21300000, guid: 1cd189023a1ab5c41a1ca8fce73fdfed, type: 3}
 --- !u!4 &1189764462
 Transform:
   m_ObjectHideFlags: 0

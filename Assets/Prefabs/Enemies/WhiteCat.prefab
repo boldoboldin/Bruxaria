@@ -5046,9 +5046,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   str: 4
-  vel: 7
+  numDrops: 1
+  spdX: 7
+  spdY: 0.06
+  fluctuation: 0.001
   status: null
-  explosionFX: {fileID: 3279311496138028329, guid: ee6d3035f43fcaa4b887724b36a54c58, type: 3}
+  isUp: 1
+  isAccelerating: 0
+  canGoUp: 1
+  canGoDown: 1
+  hasDied: 0
+  explosionFX: {fileID: 4440713944912484692, guid: e5c6863f658bf284f8db37b89cc5d97d, type: 3}
+  dropItemList:
+  - {fileID: 3279311496138028329, guid: 37892d0bcb2bba44884013044ce20491, type: 3}
+  - {fileID: 3279311496138028329, guid: ee6d3035f43fcaa4b887724b36a54c58, type: 3}
 --- !u!1 &2681592691114471986
 GameObject:
   m_ObjectHideFlags: 0

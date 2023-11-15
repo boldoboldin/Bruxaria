@@ -502,24 +502,24 @@ public class CraftingSystem : IItemHolder
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.PurpleMushroom;
         recipe[0, 2] = ItensCtrl.ItemType.None;
         poisonRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.BottleS;
         recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.PurpleMushroom;
         poisonRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 0] = ItensCtrl.ItemType.PurpleMushroom;
         recipe[0, 1] = ItensCtrl.ItemType.BottleS;
         recipe[0, 2] = ItensCtrl.ItemType.None;
         poisonRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 0] = ItensCtrl.ItemType.PurpleMushroom;
         recipe[0, 1] = ItensCtrl.ItemType.None;
         recipe[0, 2] = ItensCtrl.ItemType.BottleS;
         poisonRecipes.Add(recipe);
@@ -527,12 +527,12 @@ public class CraftingSystem : IItemHolder
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.None;
         recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.PurpleMushroom;
         poisonRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.GreenMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.PurpleMushroom;
         recipe[0, 2] = ItensCtrl.ItemType.BottleS;
         poisonRecipes.Add(recipe);
 
@@ -741,17 +741,17 @@ public class CraftingSystem : IItemHolder
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Wood;
         recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.BlueMushroom;
+        recipe[0, 2] = ItensCtrl.ItemType.BallOfWool;
         bowRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.BlueMushroom;
+        recipe[0, 1] = ItensCtrl.ItemType.BallOfWool;
         recipe[0, 2] = ItensCtrl.ItemType.Wood;
         bowRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BlueMushroom;
+        recipe[0, 0] = ItensCtrl.ItemType.BallOfWool;
         recipe[0, 1] = ItensCtrl.ItemType.Wood;
         recipe[0, 2] = ItensCtrl.ItemType.Wood;
         bowRecipes.Add(recipe);

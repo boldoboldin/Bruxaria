@@ -52,7 +52,9 @@ public class ItensCtrl
         FrozenArrow,
 
         Poison,
-        GreenMushroom,
+        PurpleMushroom,
+
+        BallOfWool,
     }
 
     public ItemType itemType;
@@ -140,8 +142,9 @@ public class ItensCtrl
             case ItemType.FrozenArrow: return ItensAsset.Instance.frozenArrowSprt;
 
             case ItemType.Poison: return ItensAsset.Instance.poisonSprt;
-            case ItemType.GreenMushroom: return ItensAsset.Instance.greenMushroomSprt;
+            case ItemType.PurpleMushroom: return ItensAsset.Instance.purpleMushroomSprt;
 
+            case ItemType.BallOfWool: return ItensAsset.Instance.ballOfWoolSprt;
         }
     }
 

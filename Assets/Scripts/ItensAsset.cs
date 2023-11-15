@@ -60,5 +60,7 @@ public class ItensAsset : MonoBehaviour
 
     public Sprite poisonSprt;
 
-    public Sprite greenMushroomSprt;
+    public Sprite purpleMushroomSprt;
+
+    public Sprite ballOfWoolSprt;
 }

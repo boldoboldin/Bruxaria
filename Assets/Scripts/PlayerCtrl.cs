@@ -223,6 +223,11 @@ public class PlayerCtrl : MonoBehaviour
                     inventory.RemoveItem(item);
                     break;
 
+                case ItensCtrl.ItemType.FrozenArrow:
+                    shotType = "Frozen Arrow";
+                    inventory.RemoveItem(item);
+                    break;
+
                 case ItensCtrl.ItemType.FireRing:
                     shotType = "Fire Ball";
                     inventory.RemoveItem(item);

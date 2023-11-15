@@ -22,9 +22,10 @@ public class EnemyCtrl : MonoBehaviour
     public void EnemyHit(int damage)
     {
         hp = -damage;
-
+        Debug.Log("Tomou dano");
         if (hp <= 0f)
         {
+            Debug.Log("E morreu");
             Instantiate(explosionFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

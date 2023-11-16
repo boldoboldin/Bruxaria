@@ -153,9 +153,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02ed99d5beb754e856bab3fbef247b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpd: 7
+  shotSpd: 0.1
+  accelerating: 0.0005
   shotStr: 4
+  isBoomerang: 1
   shotImpactXF: {fileID: 8668623396113080422, guid: abd83cdd384d7d047af38da64fbf5634, type: 3}
+  isLeft: 1
+  isAccelerating: 0
 --- !u!50 &375704866132867664
 Rigidbody2D:
   serializedVersion: 4

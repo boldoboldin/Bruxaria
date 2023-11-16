@@ -131,9 +131,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a02ed99d5beb754e856bab3fbef247b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSpd: 10
+  shotSpd: 15
+  accelerating: 0
   shotStr: 4
+  isBoomerang: 0
   shotImpactXF: {fileID: 0}
+  isLeft: 0
+  isAccelerating: 0
 --- !u!61 &7633264552504973939
 BoxCollider2D:
   m_ObjectHideFlags: 0

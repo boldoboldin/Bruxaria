@@ -93,8 +93,8 @@ public class EnemyCtrl : MonoBehaviour
 
             for (int i = 0; i < numDrops; i++)
             {
-                float rndX = Random.Range(-1.5f, 1.5f);
-                float rndY = Random.Range(-1.5f, 1.5f);
+                float rndX = Random.Range(-1f, 1f);
+                float rndY = Random.Range(-1f, 1f);
 
                 int dropItem = Random.Range(0, dropItemList.Length);
 

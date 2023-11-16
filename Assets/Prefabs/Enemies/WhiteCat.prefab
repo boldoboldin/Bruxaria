@@ -5048,7 +5048,7 @@ MonoBehaviour:
   str: 4
   numDrops: 1
   spdX: 7
-  spdY: 0.06
+  spdY: 0.05
   fluctuation: 0.001
   status: null
   isUp: 1

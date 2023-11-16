@@ -27,6 +27,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
     private string shotType = "null";
+    public int arrowAmount, poisonArrowAmount, flamingArrowAmount, frozenArrowAmount;
 
     [Header("Inventory/Crafting Variables")]
     [SerializeField] private Vector2 inventoryVisiblePos;
@@ -54,7 +55,59 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (shotType == "null")
+        {
+            boomerangBttn.SetActive(false);
+            arrowBttn.SetActive(false);
+            poisonArrowBttn.SetActive(false);
+            flamingArrowBttn.SetActive(false);
+            frozenArrowBttn.SetActive(false);
+        }
+
+        if (shotType == "Boomerang")
+        {
+            boomerangBttn.SetActive(true);
+            arrowBttn.SetActive(false);
+            poisonArrowBttn.SetActive(false);
+            flamingArrowBttn.SetActive(false);
+            frozenArrowBttn.SetActive(false);
+        }
+
+        if (shotType == "Arrow")
+        {
+            boomerangBttn.SetActive(false);
+            arrowBttn.SetActive(true);
+            poisonArrowBttn.SetActive(false);
+            flamingArrowBttn.SetActive(false);
+            frozenArrowBttn.SetActive(false);
+        }
+
+        if (shotType == "Poison Arrow")
+        {
+            boomerangBttn.SetActive(false);
+            arrowBttn.SetActive(false);
+            poisonArrowBttn.SetActive(true);
+            flamingArrowBttn.SetActive(false);
+            frozenArrowBttn.SetActive(false);
+        }
+
+        if (shotType == "Flaming Arrow")
+        {
+            boomerangBttn.SetActive(false);
+            arrowBttn.SetActive(false);
+            poisonArrowBttn.SetActive(false);
+            flamingArrowBttn.SetActive(true);
+            frozenArrowBttn.SetActive(false);
+        }
+
+        if (shotType == "Frozen Arrow")
+        {
+            boomerangBttn.SetActive(false);
+            arrowBttn.SetActive(false);
+            poisonArrowBttn.SetActive(false);
+            flamingArrowBttn.SetActive(false);
+            frozenArrowBttn.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
@@ -90,21 +143,25 @@ public class PlayerCtrl : MonoBehaviour
 
         if (shotType == "Arrow")
         {
+            arrowAmount -= 1;
             Instantiate(playerShot[1], firePoint.transform.position, Quaternion.identity);
         }
 
         if (shotType == "Poison Arrow")
         {
+            poisonArrowAmount -= 1;
             Instantiate(playerShot[2], firePoint.transform.position, Quaternion.identity);
         }
 
         if (shotType == "Flaming Arrow")
         {
+            flamingArrowAmount -= 1;
             Instantiate(playerShot[3], firePoint.transform.position, Quaternion.identity);
         }
 
         if (shotType == "Frozen Arrow")
         {
+            frozenArrowAmount -= 1;
             Instantiate(playerShot[4], firePoint.transform.position, Quaternion.identity);
         }
 
@@ -208,7 +265,7 @@ public class PlayerCtrl : MonoBehaviour
                     inventory.RemoveItem(item);
                     break;
 
-                case ItensCtrl.ItemType.Arrow:
+                case ItensCtrl.ItemType.Bow:
                     shotType = "Arrow";
                     inventory.RemoveItem(item);
                     break;

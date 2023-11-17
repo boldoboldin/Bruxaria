@@ -804,7 +804,7 @@ public class CraftingSystem : IItemHolder
 
         //Arrow
         List<ItensCtrl.ItemType[,]> arrowRecipes = new List<ItensCtrl.ItemType[,]>();
-
+        
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
         recipe[0, 0] = ItensCtrl.ItemType.Wood;
         recipe[0, 1] = ItensCtrl.ItemType.Stone;
@@ -840,8 +840,9 @@ public class CraftingSystem : IItemHolder
         recipe[0, 1] = ItensCtrl.ItemType.Stone;
         recipe[0, 2] = ItensCtrl.ItemType.Wood;
         arrowRecipes.Add(recipe);
-
+        
         recipeDictionary[ItensCtrl.ItemType.Arrow] = arrowRecipes;
+        
 
         //Poison Arrow
         List<ItensCtrl.ItemType[,]> poisonArrowRecipes = new List<ItensCtrl.ItemType[,]>();

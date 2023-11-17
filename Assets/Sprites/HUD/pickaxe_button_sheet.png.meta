@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b90fce4b404443646bb9f95e6a6f8308
+guid: 40526ece75eb3c04fb5616d0ca78cb50
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,13 +136,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pickaxe_sheet_0
+      name: pickaxe_button_sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,41 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1fd74df6976a7240b962188d97eb5ac
-      internalID: -1575463716
+      spriteID: 9c7c25dca76d61345ad937d0f164a74d
+      internalID: 1435602801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pickaxe_sheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3daaf6a0d80a6394390641da26ef750d
-      internalID: -1827572849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pickaxe_sheet_2
+      name: pickaxe_button_sheet_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,29 +171,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f65222a3464ac5445810222b5914ecd7
-      internalID: 155766419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pickaxe_sheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10fa8135e9bf22e468435f782a39d2fc
-      internalID: -1058686433
+      spriteID: f89af27ed2a229d47a70a8dcc5f43458
+      internalID: -1548753119
       vertices: []
       indices: 
       edges: []
@@ -230,10 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      pickaxe_sheet_0: -1575463716
-      pickaxe_sheet_1: -1827572849
-      pickaxe_sheet_2: 155766419
-      pickaxe_sheet_3: -1058686433
+      pickaxe_button_sheet_0: 1435602801
+      pickaxe_button_sheet_1: -1548753119
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -17,7 +17,7 @@ public class PlayerCtrl : MonoBehaviour
     [Header("Status Variables")]
     //[SerializeField] private int def;
     [SerializeField] private float vel;
-    private bool canMove;
+    private bool canMove, hasDied;
     //[SerializeField] private string status = "null";
     public float hp, maxHP;
 
@@ -26,7 +26,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
-    private string shotEquip = "null", shotType = "null";
+    private string weaponEquip = "null", shotWeaponType = "null", toolEquip = "null", shotToolType = "null", shieldEquip = "null";
     public int arrowAmount, poisonArrowAmount, flamingArrowAmount, frozenArrowAmount;
 
     [Header("Inventory/Crafting Variables")]
@@ -34,7 +34,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private Vector2 inventoryHiddenPos;
     [SerializeField] private Animator paternAnim;
     private InventoryCtrl inventory;
-    public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel, delBttn, useBttn, resumeDelBttn, resumeUseBttn, shotBttns, boomerangBttn, arrowBttn, poisonArrowBttn, flamingArrowBttn, frozenArrowBttn, fireBallBttn;
+    public GameObject hudInventory, hudCrafting, pauseBttn, resumeBttn, settingsBttn, fogPanel, delBttn, useBttn, resumeDelBttn, resumeUseBttn, equipBttns, boomerangBttn, arrowBttn, poisonArrowBttn, flamingArrowBttn, frozenArrowBttn, fireBallBttn, axeBttn, pickaxeBttn, replayBttn, gameOverTitle;
     public bool canCollect = true;
     public string inventoryMode = "OrgMode";
     
@@ -55,7 +55,9 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (shotType == "null")
+        currentShotTime -= Time.deltaTime;
+
+        if (shotWeaponType == "null")
         {
             boomerangBttn.SetActive(false);
             arrowBttn.SetActive(false);
@@ -64,7 +66,7 @@ public class PlayerCtrl : MonoBehaviour
             frozenArrowBttn.SetActive(false);
         }
 
-        if (shotType == "Boomerang")
+        if (shotWeaponType == "Boomerang")
         {
             boomerangBttn.SetActive(true);
             arrowBttn.SetActive(false);
@@ -73,7 +75,7 @@ public class PlayerCtrl : MonoBehaviour
             frozenArrowBttn.SetActive(false);
         }
 
-        if (shotType == "Arrow")
+        if (shotWeaponType == "Arrow")
         {
             boomerangBttn.SetActive(false);
             arrowBttn.SetActive(true);
@@ -82,7 +84,7 @@ public class PlayerCtrl : MonoBehaviour
             frozenArrowBttn.SetActive(false);
         }
 
-        if (shotType == "Poison Arrow")
+        if (shotWeaponType == "Poison Arrow")
         {
             boomerangBttn.SetActive(false);
             arrowBttn.SetActive(false);
@@ -91,7 +93,7 @@ public class PlayerCtrl : MonoBehaviour
             frozenArrowBttn.SetActive(false);
         }
 
-        if (shotType == "Flaming Arrow")
+        if (shotWeaponType == "Flaming Arrow")
         {
             boomerangBttn.SetActive(false);
             arrowBttn.SetActive(false);
@@ -100,13 +102,31 @@ public class PlayerCtrl : MonoBehaviour
             frozenArrowBttn.SetActive(false);
         }
 
-        if (shotType == "Frozen Arrow")
+        if (shotWeaponType == "Frozen Arrow")
         {
             boomerangBttn.SetActive(false);
             arrowBttn.SetActive(false);
             poisonArrowBttn.SetActive(false);
             flamingArrowBttn.SetActive(false);
             frozenArrowBttn.SetActive(true);
+        }
+
+        if (shotToolType == "null")
+        {
+            axeBttn.SetActive(false);
+            pickaxeBttn.SetActive(false);
+        }
+
+        if (shotToolType == "Axe")
+        {
+            axeBttn.SetActive(true);
+            pickaxeBttn.SetActive(false);
+        }
+
+        if (shotToolType == "Pickaxe")
+        {
+            axeBttn.SetActive(false);
+            pickaxeBttn.SetActive(true);
         }
     }
 
@@ -132,45 +152,60 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
-    public void Fire()
+    public void Fire(string equip)
     {
-        currentShotTime -= Time.deltaTime;
-
-        if (shotType == "Boomerang")
+        if (shotWeaponType == "Boomerang" && equip == "Weapon" && currentShotTime <= 0)
         {
            Instantiate(playerShot[0], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        if (shotType == "Arrow")
+        if (shotWeaponType == "Arrow" && equip == "Weapon" && currentShotTime <= 0)
         {
             arrowAmount -= 1;
             Instantiate(playerShot[1], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        if (shotType == "Poison Arrow")
+        if (shotWeaponType == "Poison Arrow" && equip == "Weapon" && currentShotTime <= 0)
         {
             poisonArrowAmount -= 1;
             Instantiate(playerShot[2], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        if (shotType == "Flaming Arrow")
+        if (shotWeaponType == "Flaming Arrow" && equip == "Weapon" && currentShotTime <= 0)
+
         {
             flamingArrowAmount -= 1;
             Instantiate(playerShot[3], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        if (shotType == "Frozen Arrow")
+        if (shotWeaponType == "Frozen Arrow" && equip == "Weapon" && currentShotTime <= 0)
         {
             frozenArrowAmount -= 1;
             Instantiate(playerShot[4], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        if (shotType == "Fire Ball")
+        if (shotWeaponType == "Fire Ball" && equip == "Weapon" && currentShotTime <= 0)
         {
             Instantiate(playerShot[5], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
         }
 
-        currentShotTime = maxShotTime;
+        if (shotToolType == "Axe" && equip == "Tool" && currentShotTime <= 0)
+        {
+            Instantiate(playerShot[6], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
+        }
+
+        if (shotToolType == "Pickaxe" && equip == "Tool" && currentShotTime <= 0)
+        {
+            Instantiate(playerShot[7], firePoint.transform.position, Quaternion.identity);
+            currentShotTime = maxShotTime;
+        }
     }
 
     private void UseItem(ItensCtrl item)
@@ -268,47 +303,59 @@ public class PlayerCtrl : MonoBehaviour
                     inventory.RemoveItem(item);
                     break;
 
+                case ItensCtrl.ItemType.Axe:
+                    shotToolType = "Axe";
+                    toolEquip = "Axe";
+                    inventory.RemoveItem(item);
+                    break;
+
+                case ItensCtrl.ItemType.Pickaxe:
+                    shotToolType = "Pickaxe";
+                    toolEquip = "Pickaxe";
+                    inventory.RemoveItem(item);
+                    break;
+
                 case ItensCtrl.ItemType.Boomerang:
-                    shotType = "Boomerang";
-                    shotEquip = "Boomerang";
+                    shotWeaponType = "Boomerang";
+                    weaponEquip = "Boomerang";
                     inventory.RemoveItem(item);
                     break;
 
                 case ItensCtrl.ItemType.Bow:
-                    shotEquip = "Bow";
+                    weaponEquip = "Bow";
                     inventory.RemoveItem(item);
                     break;
 
                 case ItensCtrl.ItemType.Arrow:
-                    if (shotEquip == "Bow")
+                    if (weaponEquip == "Bow")
                     {
-                        shotType = "Arrow";
+                        shotWeaponType = "Arrow";
                     }
                     break;
 
                 case ItensCtrl.ItemType.PoisonArrow:
-                    if (shotEquip == "Bow")
+                    if (weaponEquip == "Bow")
                     {
-                        shotType = "Poison Arrow";
+                        shotWeaponType = "Poison Arrow";
                     }
                     break;
 
                 case ItensCtrl.ItemType.FlamingArrow:
-                    if (shotEquip == "Bow")
+                    if (weaponEquip == "Bow")
                     {
-                        shotType = "Flaming Arrow";
+                        shotWeaponType = "Flaming Arrow";
                     }
                     break;
 
                 case ItensCtrl.ItemType.FrozenArrow:
-                    if (shotEquip == "Bow")
+                    if (weaponEquip == "Bow")
                     {
-                        shotType = "Frozen Arrow";
+                        shotWeaponType = "Frozen Arrow";
                     }
                     break;
 
                 case ItensCtrl.ItemType.FireRing:
-                    shotType = "Fire Ball";
+                    shotWeaponType = "Fire Ball";
                     inventory.RemoveItem(item);
                     break;
             }
@@ -362,6 +409,9 @@ public class PlayerCtrl : MonoBehaviour
             Instantiate(bagFalling, transform.position, Quaternion.identity);
             Instantiate(broomFalling, transform.position, Quaternion.identity);
 
+            ShowGameOver();
+            Time.timeScale = 0.1f;
+
             Destroy(gameObject);
         }
     }
@@ -374,7 +424,7 @@ public class PlayerCtrl : MonoBehaviour
         settingsBttn.SetActive(true);
         fogPanel.SetActive(true);
         pauseBttn.SetActive(false);
-        shotBttns.SetActive(false);
+        equipBttns.SetActive(false);
 
         OrgMode();
 
@@ -395,7 +445,7 @@ public class PlayerCtrl : MonoBehaviour
         resumeDelBttn.SetActive(false);
         fogPanel.SetActive(false);
         pauseBttn.SetActive(true);
-        shotBttns.SetActive(true);
+        equipBttns.SetActive(true);
 
         canMove = true;
 
@@ -443,6 +493,27 @@ public class PlayerCtrl : MonoBehaviour
         paternAnim.SetBool("DelMode", false);
 
         inventoryMode = "OrgMode";
+    }
+
+    public void ShowGameOver()
+    {
+        hudInventory.transform.position = inventoryHiddenPos;
+
+        fogPanel.GetComponent<Image>().color = new Color32(207, 87, 60, 200);
+        fogPanel.SetActive(true);
+        paternAnim.SetTrigger("GameOverMode");
+
+        resumeBttn.SetActive(false);
+        settingsBttn.SetActive(false);
+        useBttn.SetActive(false);
+        delBttn.SetActive(false);
+        resumeUseBttn.SetActive(false);
+        resumeDelBttn.SetActive(false);
+        pauseBttn.SetActive(false);
+        equipBttns.SetActive(false);
+
+        gameOverTitle.SetActive(true);
+        replayBttn.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

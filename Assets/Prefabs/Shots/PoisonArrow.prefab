@@ -135,7 +135,7 @@ MonoBehaviour:
   accelerating: 0
   shotStr: 4
   isBoomerang: 0
-  shotImpactXF: {fileID: 0}
+  shotImpactXF: {fileID: 4440713944912484692, guid: e5c6863f658bf284f8db37b89cc5d97d, type: 3}
   isLeft: 0
   isAccelerating: 0
 --- !u!61 &7633264552504973939

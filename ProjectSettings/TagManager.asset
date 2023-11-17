@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Item
   - Shot
+  - Rock
+  - Trunk
+  - Axe
+  - Pickaxe
   layers:
   - Default
   - TransparentFX

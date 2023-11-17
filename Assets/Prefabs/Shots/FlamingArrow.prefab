@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 790482310698867691}
   - component: {fileID: 7593512581152261869}
   - component: {fileID: 1576802643305536562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LFireFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4839,7 +4839,7 @@ GameObject:
   - component: {fileID: 9209707460530462695}
   - component: {fileID: 532015160981548896}
   - component: {fileID: 6415208906121173922}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SFireFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9708,7 +9708,7 @@ MonoBehaviour:
   accelerating: 0
   shotStr: 4
   isBoomerang: 0
-  shotImpactXF: {fileID: 0}
+  shotImpactXF: {fileID: 4440713944912484692, guid: e5c6863f658bf284f8db37b89cc5d97d, type: 3}
   isLeft: 0
   isAccelerating: 0
 --- !u!61 &172920155783668930
@@ -9794,7 +9794,7 @@ GameObject:
   - component: {fileID: 5801988697255624389}
   - component: {fileID: 8390631976543862484}
   - component: {fileID: 3815622484122302115}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MFireFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14620,7 +14620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4849052258276463841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FIreFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14658,7 +14658,7 @@ GameObject:
   - component: {fileID: 3144644285479903771}
   - component: {fileID: 3526737650129074949}
   - component: {fileID: 1798478485962604184}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LFireFXLocal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19570,7 +19570,7 @@ GameObject:
   - component: {fileID: 758018251700945964}
   - component: {fileID: 1050373170091399161}
   - component: {fileID: 7416614250706528008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MFireFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

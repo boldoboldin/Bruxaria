@@ -74,12 +74,28 @@ public class ShotCtrl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Enemy") && gameObject.tag == "Shot")
         {
             other.GetComponent<EnemyCtrl>().EnemyHit(shotStr);
 
             Destroy(gameObject);
             Instantiate(shotImpactXF, transform.position, Quaternion.identity);
-        }      
+        }
+
+        if (other.CompareTag("Trunk") && gameObject.tag == "Axe")
+        {
+            other.GetComponent<EnemyCtrl>().EnemyHit(shotStr);
+
+            Destroy(gameObject);
+            Instantiate(shotImpactXF, transform.position, Quaternion.identity);
+        }
+
+        if (other.CompareTag("Rock") && gameObject.tag == "Pickaxe")
+        {
+            other.GetComponent<EnemyCtrl>().EnemyHit(shotStr);
+
+            Destroy(gameObject);
+            Instantiate(shotImpactXF, transform.position, Quaternion.identity);
+        }
     }
 }

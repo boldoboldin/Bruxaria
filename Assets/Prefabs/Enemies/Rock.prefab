@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6528120253541089900}
   - component: {fileID: 7571092502560992200}
   - component: {fileID: 1627346283480536206}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4839,7 +4839,7 @@ GameObject:
   - component: {fileID: 5478944192175064217}
   - component: {fileID: 4773268440503949741}
   - component: {fileID: 5848558602420136895}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9667,7 +9667,7 @@ GameObject:
   - component: {fileID: 8282134116940538877}
   - component: {fileID: 8326825847222655594}
   - component: {fileID: 7553966978491088797}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14495,7 +14495,7 @@ GameObject:
   - component: {fileID: 3056370163858195871}
   - component: {fileID: 181987883516910926}
   - component: {fileID: 8584948654649449494}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19323,7 +19323,7 @@ GameObject:
   - component: {fileID: 968150079568573600}
   - component: {fileID: 345305364278978654}
   - component: {fileID: 5298139044925337223}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24151,7 +24151,7 @@ GameObject:
   - component: {fileID: 7711564964817798680}
   - component: {fileID: 2215355291646367753}
   - component: {fileID: 3841257550359577364}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28979,7 +28979,7 @@ GameObject:
   - component: {fileID: 2412954208007215159}
   - component: {fileID: 4237273403290326581}
   - component: {fileID: 1631914189546887116}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33807,7 +33807,7 @@ GameObject:
   - component: {fileID: 4088986993384067465}
   - component: {fileID: 2543211113178098596}
   - component: {fileID: 3256613891243202786}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38633,7 +38633,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5239037226305513986}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GhostFX3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38671,7 +38671,7 @@ GameObject:
   - component: {fileID: 9190273374827361105}
   - component: {fileID: 3866457268395597503}
   - component: {fileID: 6454640200435603272}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43499,7 +43499,7 @@ GameObject:
   - component: {fileID: 4153380811085482015}
   - component: {fileID: 6344058035388950955}
   - component: {fileID: 7383864048613671323}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48327,7 +48327,7 @@ GameObject:
   - component: {fileID: 1754089351727596408}
   - component: {fileID: 4327051315026117597}
   - component: {fileID: 7728947181477019024}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53155,7 +53155,7 @@ GameObject:
   - component: {fileID: 5246533896870441257}
   - component: {fileID: 2127569732401386795}
   - component: {fileID: 370073727788988140}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: SGhostFXWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57981,7 +57981,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6793471986582220309}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GhostFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58019,7 +58019,7 @@ GameObject:
   - component: {fileID: 3759505936492945796}
   - component: {fileID: 4675301858443275146}
   - component: {fileID: 3301745305840311715}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62850,7 +62850,7 @@ GameObject:
   - component: {fileID: 9036754830665326500}
   m_Layer: 7
   m_Name: Rock
-  m_TagString: Enemy
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62971,7 +62971,7 @@ GameObject:
   - component: {fileID: 5224062050735026531}
   - component: {fileID: 3036915568896218468}
   - component: {fileID: 1505513067637792830}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: LGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67798,7 +67798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6276935910712931724}
   - component: {fileID: 2441222972159375623}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: RockSprt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67884,7 +67884,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5397330977779181271}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GhostFX2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67922,7 +67922,7 @@ GameObject:
   - component: {fileID: 4255568551620592470}
   - component: {fileID: 5621255164594175412}
   - component: {fileID: 5817535435658445077}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: MGhostFXLocal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

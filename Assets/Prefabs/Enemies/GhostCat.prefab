@@ -5046,9 +5046,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 4
   str: 4
-  vel: 7.5
+  numDrops: 0
+  spdX: 0
+  spdY: 0
+  fluctuation: 0
   status: null
+  isUp: 0
+  isAccelerating: 0
+  canGoUp: 0
+  canGoDown: 0
+  hasDied: 0
   explosionFX: {fileID: 0}
+  dropItemList: []
 --- !u!1 &2681592691114471986
 GameObject:
   m_ObjectHideFlags: 0

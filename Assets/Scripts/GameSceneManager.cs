@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameSceneManager : MonoBehaviour
 {
-    [SerializeField] private GameObject settingsBttn, returnBttn, playBttn, exitBttn, soundSettingsBttn, titleText;
+    [SerializeField] private GameObject settingsBttn, returnBttn, playBttn, exitBttn, soundSettingsBttn, titleText, credits;
     
     public void LoadScene(int sceneNum)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneNum);
     }
 
@@ -26,6 +27,7 @@ public class GameSceneManager : MonoBehaviour
 
         soundSettingsBttn.SetActive(true);
         returnBttn.SetActive(true);
+        credits.SetActive(true);
     }
     public void HideSettings()
     {
@@ -36,6 +38,7 @@ public class GameSceneManager : MonoBehaviour
 
         soundSettingsBttn.SetActive(false);
         returnBttn.SetActive(false);
+        credits.SetActive(false);
     }
 
 

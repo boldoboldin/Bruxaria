@@ -56,10 +56,11 @@ public class InventoryCtrl : IItemHolder
 
     public void AddItem(ItensCtrl item)
     {
-        itensList.Add(item);
-        item.SetItemHolder(this);
-        GetEmptyInventorySlot().SetItem(item);
-        OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        //itensList.Add(item);
+        //item.SetItemHolder(this);
+        //GetEmptyInventorySlot().SetItem(item);
+        //OnItemListChanged?.Invoke(this, EventArgs.Empty);
+        AddItemMergeAmount(item);
     }
 
     public void AddItemMergeAmount(ItensCtrl item)

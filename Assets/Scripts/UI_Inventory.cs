@@ -84,7 +84,6 @@ public class UI_Inventory : MonoBehaviour
                 inventory.AddItem(draggedItem, tmpInventorySlot);
             });
 
-            
             int itemRowMax = 6;
             if (xPos <= itemRowMax)
             {

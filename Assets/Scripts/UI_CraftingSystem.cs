@@ -33,7 +33,6 @@ public class UI_CraftingSystem : MonoBehaviour
         
 
         recipeSlotTransform = transform.Find("RecipeSlot");
-        Debug.Log("Encontrou RecipeSlot");
 
         //CreateItem(0, 0, new ItensCtrl { itemType = ItensCtrl.ItemType.Ruby });
         //CreateRecipeItem(0, 0, new ItensCtrl { itemType = ItensCtrl.ItemType.Sapphire });
@@ -89,8 +88,6 @@ public class UI_CraftingSystem : MonoBehaviour
         RectTransform itemRectTransform = itemTransform.GetComponent<RectTransform>();
         itemRectTransform.anchoredPosition = slotTransformArray[x, y].GetComponent<RectTransform>().anchoredPosition;
         itemTransform.GetComponent<UI_Item>().SetItem(item);
-        Debug.Log("Craftou errado");
-
     }
 
     private void CreateRecipeItem(ItensCtrl item)
@@ -99,7 +96,5 @@ public class UI_CraftingSystem : MonoBehaviour
         RectTransform itemRectTransform = itemTransform.GetComponent<RectTransform>();
         itemRectTransform.anchoredPosition = recipeSlotTransform.GetComponent<RectTransform>().anchoredPosition;
         itemTransform.GetComponent<UI_Item>().SetItem(item);
-
-        Debug.Log("Craftou certo");
     }
 }

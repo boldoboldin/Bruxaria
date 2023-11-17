@@ -63,4 +63,7 @@ public class ItensAsset : MonoBehaviour
     public Sprite purpleMushroomSprt;
 
     public Sprite ballOfWoolSprt;
+
+    public Sprite axeSprt;
+    public Sprite pickaxeSprt;
 }

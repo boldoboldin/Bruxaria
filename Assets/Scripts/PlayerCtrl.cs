@@ -26,7 +26,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private float shotSpeed, maxShotTime;
     private float currentShotTime;
-    private string shotType = "null";
+    private string shotEquip = "null", shotType = "null";
     public int arrowAmount, poisonArrowAmount, flamingArrowAmount, frozenArrowAmount;
 
     [Header("Inventory/Crafting Variables")]
@@ -242,6 +242,14 @@ public class PlayerCtrl : MonoBehaviour
                     }
                     break;
 
+                case ItensCtrl.ItemType.PurpleMushroom:
+                    if (hp < maxHP)
+                    {
+                        PlayerHit(4); //1
+                        inventory.RemoveItem(item);
+                    }
+                    break;
+
                 case ItensCtrl.ItemType.GoldMushroom:
                     if (hp < maxHP)
                     {
@@ -256,33 +264,47 @@ public class PlayerCtrl : MonoBehaviour
                     break;
 
                 case ItensCtrl.ItemType.Poison:
-                    PlayerHit(6); //1.5
+                    PlayerHit(8); //2
                     inventory.RemoveItem(item);
                     break;
 
                 case ItensCtrl.ItemType.Boomerang:
                     shotType = "Boomerang";
+                    shotEquip = "Boomerang";
                     inventory.RemoveItem(item);
                     break;
 
                 case ItensCtrl.ItemType.Bow:
-                    shotType = "Arrow";
+                    shotEquip = "Bow";
                     inventory.RemoveItem(item);
+                    break;
+
+                case ItensCtrl.ItemType.Arrow:
+                    if (shotEquip == "Bow")
+                    {
+                        shotType = "Arrow";
+                    }
                     break;
 
                 case ItensCtrl.ItemType.PoisonArrow:
-                    shotType = "Poison Arrow";
-                    inventory.RemoveItem(item);
+                    if (shotEquip == "Bow")
+                    {
+                        shotType = "Poison Arrow";
+                    }
                     break;
 
                 case ItensCtrl.ItemType.FlamingArrow:
-                    shotType = "Flaming Arrow";
-                    inventory.RemoveItem(item);
+                    if (shotEquip == "Bow")
+                    {
+                        shotType = "Flaming Arrow";
+                    }
                     break;
 
                 case ItensCtrl.ItemType.FrozenArrow:
-                    shotType = "Frozen Arrow";
-                    inventory.RemoveItem(item);
+                    if (shotEquip == "Bow")
+                    {
+                        shotType = "Frozen Arrow";
+                    }
                     break;
 
                 case ItensCtrl.ItemType.FireRing:

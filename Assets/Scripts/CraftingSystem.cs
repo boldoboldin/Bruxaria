@@ -735,6 +735,50 @@ public class CraftingSystem : IItemHolder
 
         recipeDictionary[ItensCtrl.ItemType.FireRing] = fireRingRecipes;
 
+        //Axe
+        List<ItensCtrl.ItemType[,]> axeRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        axeRecipes.Add(recipe);
+
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        axeRecipes.Add(recipe);
+
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        axeRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Axe] = axeRecipes;
+
+        //Pickaxe
+        List<ItensCtrl.ItemType[,]> pickaxeRecipes = new List<ItensCtrl.ItemType[,]>();
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Wood;
+        pickaxeRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Stone;
+        recipe[0, 1] = ItensCtrl.ItemType.Wood;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        pickaxeRecipes.Add(recipe);
+
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.Wood;
+        recipe[0, 1] = ItensCtrl.ItemType.Stone;
+        recipe[0, 2] = ItensCtrl.ItemType.Stone;
+        pickaxeRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.Pickaxe] = pickaxeRecipes;
+
         //Bow
         List<ItensCtrl.ItemType[,]> bowRecipes = new List<ItensCtrl.ItemType[,]>();
 
@@ -1054,7 +1098,7 @@ public class CraftingSystem : IItemHolder
         OnGridChanged?.Invoke(this, EventArgs.Empty);
     }
 
-    public void IncreaseItemAMount (int x, int y)
+    public void IncreaseItemAmount (int x, int y)
     {
         GetItem(x, y).amount++;
         OnGridChanged?.Invoke(this, EventArgs.Empty);
@@ -1089,7 +1133,7 @@ public class CraftingSystem : IItemHolder
         {
             if (item.itemType == GetItem(x, y).itemType)
             {
-                IncreaseItemAMount(x, y);
+                IncreaseItemAmount(x, y);
                 return true;
             }
             else

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [Serializable]
 public class ItensCtrl
@@ -55,6 +56,9 @@ public class ItensCtrl
         PurpleMushroom,
 
         BallOfWool,
+
+        Axe,
+        Pickaxe,
     }
 
     public ItemType itemType;
@@ -145,6 +149,10 @@ public class ItensCtrl
             case ItemType.PurpleMushroom: return ItensAsset.Instance.purpleMushroomSprt;
 
             case ItemType.BallOfWool: return ItensAsset.Instance.ballOfWoolSprt;
+
+            case ItemType.Axe: return ItensAsset.Instance.axeSprt;
+            case ItemType.Pickaxe: return ItensAsset.Instance.pickaxeSprt;
+
         }
     }
 
@@ -158,6 +166,13 @@ public class ItensCtrl
         switch (itemType)
         {
             default:
+            
+            case ItemType.Arrow:
+            case ItemType.PoisonArrow:
+            case ItemType.FlamingArrow:
+            case ItemType.FrozenArrow:
+                return true;
+
             case ItemType.Ruby:
             case ItemType.Emerald:
             case ItemType.Sapphire:
@@ -169,13 +184,15 @@ public class ItensCtrl
 
             case ItemType.Wood:
             case ItemType.Stone:
+            case ItemType.Iron:
+            case ItemType.Gold:
             case ItemType.RedMushroom:
             case ItemType.BlueMushroom:
+            case ItemType.PurpleMushroom:
             case ItemType.GoldMushroom:
             case ItemType.Apple:
             case ItemType.GoldApple:
             case ItemType.RottenApple:
-                return true;
 
             case ItemType.GoldPotionL:
             case ItemType.GoldPotionS:
@@ -189,6 +206,16 @@ public class ItensCtrl
 
             case ItemType.WoodShield:
             case ItemType.IronShield:
+
+            case ItemType.Boomerang:
+            case ItemType.GoldRing:
+            case ItemType.FireRing:
+            case ItemType.Bow:
+            case ItemType.Poison:
+            case ItemType.BallOfWool:
+
+            case ItemType.Axe:
+            case ItemType.Pickaxe:
                 return false;
         }
     }

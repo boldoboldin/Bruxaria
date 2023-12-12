@@ -11,6 +11,7 @@ public class UI_Inventory : MonoBehaviour
     
     private InventoryCtrl inventory;
     private Transform itemSlotContainer, itemSlot;
+    private int shelf = 1;
 
     public PlayerCtrl player;
 
@@ -41,15 +42,18 @@ public class UI_Inventory : MonoBehaviour
 
     private void RefreshInventory()
     {
+        shelf = 1;
+
         foreach (Transform child in itemSlotContainer)
         {
             if (child == itemSlot) continue;
             Destroy(child.gameObject);
         }
         
-        int xPos = 0;
-        int yPos = 0;
+        float xPos = 0;
+        float yPos = 0;
         float itemSlotCellSize = 156f;
+
 
         foreach (InventoryCtrl.InventorySlot inventorySlot in inventory.GetInventorySlotArray())
         {
@@ -63,7 +67,7 @@ public class UI_Inventory : MonoBehaviour
                 inventory.UseItem(item);
             };
 
-            itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSlotCellSize, yPos);
+            itemSlotRectTransform.anchoredPosition = new Vector2(xPos * itemSlotCellSize, -yPos * itemSlotCellSize);
 
             if (!inventorySlot.IsEmpty())
             {
@@ -84,10 +88,54 @@ public class UI_Inventory : MonoBehaviour
                 inventory.AddItem(draggedItem, tmpInventorySlot);
             });
 
-            int itemRowMax = 6;
-            if (xPos <= itemRowMax)
+            int itemRowMax = 3;
+            int itemColumnMax = 4;
+
+            xPos++;
+
+            if (shelf == 1)
             {
-                xPos++;
+
+                yPos = yPos - 0.15f;
+
+                if (xPos >= itemRowMax)
+                {
+                    xPos = 0;
+                    yPos = yPos + 1.6f;
+                }
+
+                if (yPos >= itemColumnMax)
+                {
+                    xPos = 8f;
+                    yPos = 0.2f;
+                    shelf = 2;
+                }
+            }  
+
+            if (shelf == 2)
+            {
+                if (xPos >= 12)
+                {
+                    xPos = 8f;
+                    yPos++;
+                }
+                
+                if(yPos >= 3)
+                {
+                    shelf = 3;
+                    yPos = 4;
+                }
+            }
+
+            if (shelf == 3)
+            {
+                yPos = yPos - 0.2f;
+
+                if (xPos >= 12f)
+                {
+                    xPos = 5f;
+                    yPos = 2.5f;
+                }
             }
         }
     }

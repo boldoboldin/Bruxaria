@@ -10,21 +10,91 @@ public class InventoryCtrl : IItemHolder
     private List<ItensCtrl> itensList;
     private Action<ItensCtrl> useItemAct;
     public InventorySlot[] inventorySlotArray;
+    public bool start = true;
 
     public InventoryCtrl(Action<ItensCtrl> useItemAct, int inventorySlotCount)
     {
-        this.useItemAct = useItemAct;
-        itensList = new List<ItensCtrl>();
-
-        inventorySlotArray = new InventorySlot[inventorySlotCount];
-        for (int i = 0; i < inventorySlotCount; i++)
+        if(start == true)
         {
-            inventorySlotArray[i] = new InventorySlot(i);
-        }
+            this.useItemAct = useItemAct;
+            itensList = new List<ItensCtrl>();
 
-        //AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Sapphire });
-        //AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Ruby });
-        //AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Emerald });
+            inventorySlotArray = new InventorySlot[inventorySlotCount];
+            for (int i = 0; i < inventorySlotCount; i++)
+            {
+                inventorySlotArray[i] = new InventorySlot(i);
+            }
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.SuorDePombo });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.VerrugaDeSapo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.OlhoDeCobraCega });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.OlhoDePeixe });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.RaboDeCalango });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PernaDeCobra });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PernaDeBarata });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CabeloDeRaboDeRato });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.BundaDeTanajura });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.UnhaDeVelho });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.MandiocaBraba });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Amendoim });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Cogumelo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Azeitona });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.FrutasVermelhas });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.FrutosDoMar });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.SacheDeMiojo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Adocante });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.AlmaDeLagosta });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.RestoDeRaloDePia });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Amarelo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.TuttiFruti });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PlutonioEnriquecido });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CacoDeVidro });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CheiroDeUnicornio });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CheiroDeCarro });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.AUltimaLagrima });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Luxuria });
+
+            start = false;
+        }
+        else
+        {
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.SuorDePombo });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.VerrugaDeSapo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.OlhoDeCobraCega });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.OlhoDePeixe });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.RaboDeCalango });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PernaDeCobra });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PernaDeBarata });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CabeloDeRaboDeRato });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.BundaDeTanajura });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.UnhaDeVelho });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.MandiocaBraba });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Amendoim });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Cogumelo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Azeitona });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.FrutasVermelhas });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.FrutosDoMar });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.SacheDeMiojo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Adocante });
+
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.AlmaDeLagosta });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.RestoDeRaloDePia });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Amarelo });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.TuttiFruti });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.PlutonioEnriquecido });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CacoDeVidro });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CheiroDeUnicornio });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.CheiroDeCarro });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.AUltimaLagrima });
+            AddItem(new ItensCtrl { itemType = ItensCtrl.ItemType.Luxuria });
+        }
+        
+        
     }
 
     public InventorySlot GetEmptyInventorySlot()

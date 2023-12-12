@@ -9,6 +9,8 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
 {
     private PlayerCtrl playerCtrl;
 
+    [SerializeField] private RectTransform nameTag;
+
     private Canvas canvas;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
@@ -16,6 +18,9 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
     private ItensCtrl item;
     private TextMeshProUGUI amountText;
 
+
+    public string itemName;
+    public Vector2 nameTagSize = new Vector2 (3, 0.65f);
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -28,7 +33,7 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
 
     private void Update()
     {
-        if(playerCtrl.inventoryMode == "UseMode" || playerCtrl.inventoryMode == "DelMode")
+        if (playerCtrl.inventoryMode == "UseMode" || playerCtrl.inventoryMode == "DelMode")
         {
             canvasGroup.blocksRaycasts = false;
         }
@@ -40,7 +45,7 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        canvasGroup.alpha = .5f;
+        canvasGroup.alpha = 0.5f;
         canvasGroup.blocksRaycasts = false;
         UI_ItemDrag.Instance.Show(item);
     }
@@ -91,6 +96,11 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
         Debug.Log("Set UI Sprite");
     }
 
+    public void SetName(string itemName)
+    {
+        this.itemName = itemName; 
+    }
+
     public void SetAmountText(int amount)
     {
         if (amount <= 1)
@@ -118,9 +128,16 @@ public class UI_Item : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IE
     {
         this.item = item;
         SetSprite(ItensCtrl.GetSprite(item.itemType));
+        SetName(ItensCtrl.GetName(item.itemType));
         SetAmountText(item.amount);
 
         Debug.Log("Set UI Item");
     }
 
+    public void UpdateNameTag(UI_Item item)
+    {
+        nameTag.GetComponentInChildren<TextMeshProUGUI>().text = item.itemName;
+        nameTag.sizeDelta = item.nameTagSize;
+        nameTag.localPosition = new Vector2(item.nameTagSize.x / 2, 0.5f);
+    }
 }

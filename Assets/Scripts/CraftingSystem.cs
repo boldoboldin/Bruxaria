@@ -22,1060 +22,1034 @@ public class CraftingSystem : IItemHolder
 
         recipeDictionary = new Dictionary<ItensCtrl.ItemType, List<ItensCtrl.ItemType[,]>>();
 
-        //Diamond Recipes
-        List<ItensCtrl.ItemType[,]> diamondRecipes = new List<ItensCtrl.ItemType[,]>();
+        //CoracaoPartido Recipes
+        List<ItensCtrl.ItemType[,]> coracaoPartidoRecipes = new List<ItensCtrl.ItemType[,]>();
 
         ItensCtrl.ItemType[,] recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima; 
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria; //Sentimental
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo; //Amargo
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria; 
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeBarata;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.OlhoDePeixe;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.AlmaDeLagosta;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        diamondRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        coracaoPartidoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Diamond] = diamondRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.Amarelo;
+        coracaoPartidoRecipes.Add(recipe);
 
-        //Amethysta Recipes
-        List<ItensCtrl.ItemType[,]> amethystaRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.Luxuria;
+        recipe[0, 2] = ItensCtrl.ItemType.BundaDeTanajura;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeBarata;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.OlhoDePeixe;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        amethystaRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.Amarelo;
+        coracaoPartidoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Amethysta] = amethystaRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.BundaDeTanajura;
+        coracaoPartidoRecipes.Add(recipe);
 
-        //Citrine Recipes
-        List<ItensCtrl.ItemType[,]> citrineRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeBarata;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.OlhoDePeixe;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.AlmaDeLagosta;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.Amarelo;
+        coracaoPartidoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        citrineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 2] = ItensCtrl.ItemType.BundaDeTanajura;
+        coracaoPartidoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Citrine] = citrineRecipes;
+        recipeDictionary[ItensCtrl.ItemType.CoracaoPartido] = coracaoPartidoRecipes;
 
-        //Tourmaline Recipes
-        List<ItensCtrl.ItemType[,]> tourmalineRecipes = new List<ItensCtrl.ItemType[,]>();
+        //DorDeBarrigaEterna Recipes
+        List<ItensCtrl.ItemType[,]> dorDeBarrigaEternaRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        tourmalineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba; // Potente
+        recipe[0, 2] = ItensCtrl.ItemType.RaboDeCalango; // Salgado
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        tourmalineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        tourmalineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        tourmalineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.Amendoim;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Emerald;
-        tourmalineRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.FrutosDoMar;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Emerald;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        tourmalineRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.Tourmaline] = tourmalineRecipes;
-
-        //Onyx Recipes
-        List<ItensCtrl.ItemType[,]> onyxRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.UnhaDeVelho;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 2] = ItensCtrl.ItemType.SacheDeMiojo;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.RaboDeCalango;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.Amendoim;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        onyxRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.FrutosDoMar;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Onyx] = onyxRecipes;
-
-        //Ruby Recipes
-        List<ItensCtrl.ItemType[,]> rubyRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        rubyRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.UnhaDeVelho;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        rubyRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.SacheDeMiojo;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        rubyRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.RaboDeCalango;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        rubyRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        rubyRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.Amendoim;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        rubyRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.Ruby] = rubyRecipes;
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.FrutosDoMar;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        //Emerald Recipes
-        List<ItensCtrl.ItemType[,]> emeraldRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.UnhaDeVelho;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.SacheDeMiojo;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.RaboDeCalango;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Citrine;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.Citrine;
-        emeraldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.Amendoim;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Emerald] = emeraldRecipes;
-
-        //Sapphire Recipes
-        List<ItensCtrl.ItemType[,]> sapphireRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.FrutosDoMar;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.UnhaDeVelho;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.CacoDeVidro;
+        recipe[0, 2] = ItensCtrl.ItemType.SacheDeMiojo;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.RaboDeCalango;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Amethysta;
-        recipe[0, 2] = ItensCtrl.ItemType.Tourmaline;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Tourmaline;
-        recipe[0, 2] = ItensCtrl.ItemType.Amethysta;
-        sapphireRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.Amendoim;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Sapphire] = sapphireRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.FrutosDoMar;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        //Heart Recipes
-        List<ItensCtrl.ItemType[,]> heartRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.UnhaDeVelho;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.HeartPiece;
-        recipe[0, 1] = ItensCtrl.ItemType.HeartPiece;
-        recipe[0, 2] = ItensCtrl.ItemType.HeartPiece;
-        heartRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.SuorDePombo;
+        recipe[0, 1] = ItensCtrl.ItemType.AUltimaLagrima;
+        recipe[0, 2] = ItensCtrl.ItemType.SacheDeMiojo;
+        dorDeBarrigaEternaRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Heart] = heartRecipes;
+        recipeDictionary[ItensCtrl.ItemType.DorDeBarrigaEterna] = dorDeBarrigaEternaRecipes;
 
-        //HP Potion S
-        List<ItensCtrl.ItemType[,]> hpPotionS_Recipes = new List<ItensCtrl.ItemType[,]>();
+        //MatadorDeColosso Recipes
+        List<ItensCtrl.ItemType[,]> matadorDeColossoRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.Apple;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango; // Salgado
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo; // Anestésico
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Apple;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango; 
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Apple;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Apple;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.Apple;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Apple;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.RaboDeCalango;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.RedMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo; 
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.RedMushroom;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.RedMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.RedMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.RedMushroom;
-        hpPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.RedMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        hpPotionS_Recipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.HP_PotionS] = hpPotionS_Recipes;
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Azeitona;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
-        //HP Potion L
-        List<ItensCtrl.ItemType[,]> hpPotionL_Recipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.HP_PotionS;
-        recipe[0, 1] = ItensCtrl.ItemType.HP_PotionS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        hpPotionL_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.HP_PotionS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.HP_PotionS;
-        hpPotionL_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.HP_PotionS;
-        recipe[0, 2] = ItensCtrl.ItemType.HP_PotionS;
-        hpPotionL_Recipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.HP_PotionL] = hpPotionL_Recipes;
-
-        //Poison
-        List<ItensCtrl.ItemType[,]> poisonRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.RottenApple;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.RottenApple;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.RottenApple;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.CabeloDeRaboDeRato;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.RottenApple;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.RottenApple;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.RottenApple;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.PurpleMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.PurpleMushroom;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.PurpleMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.Amendoim;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.PurpleMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.PurpleMushroom;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.PurpleMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        poisonRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Poison] = poisonRecipes;
-
-        //Gold Potion S
-        List<ItensCtrl.ItemType[,]> goldPotionS_Recipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldApple;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldApple;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldApple;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutosDoMar;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldApple;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldApple;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldApple;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldMushroom;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.UnhaDeVelho;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldMushroom;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.BottleS;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldMushroom;
-        goldPotionS_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldMushroom;
-        recipe[0, 2] = ItensCtrl.ItemType.BottleS;
-        goldPotionS_Recipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.GoldPotionS] = goldPotionS_Recipes;
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        matadorDeColossoRecipes.Add(recipe);
 
-        //Gold Potion L
-        List<ItensCtrl.ItemType[,]> goldPotionL_Recipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldPotionS;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldPotionS;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        goldPotionL_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldPotionS;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldPotionS;
-        goldPotionL_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        matadorDeColossoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldPotionS;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldPotionS;
-        goldPotionL_Recipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.MandiocaBraba;
+        recipe[0, 1] = ItensCtrl.ItemType.SacheDeMiojo;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        matadorDeColossoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.GoldPotionL] = goldPotionL_Recipes;
+        recipeDictionary[ItensCtrl.ItemType.MatadorDeColosso] = matadorDeColossoRecipes;
 
-        //Boomerang
-        List<ItensCtrl.ItemType[,]> boomerangRecipes = new List<ItensCtrl.ItemType[,]>();
+        //SonoEterno recipes
+        List<ItensCtrl.ItemType[,]> sonoEternoRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        boomerangRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.Boomerang] = boomerangRecipes;
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Adocante; // Doce
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo; // Anestésico
+        sonoEternoRecipes.Add(recipe);
 
-        //Wood Shild
-        List<ItensCtrl.ItemType[,]> woodShieldRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Iron;
-        woodShieldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Adocante;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Iron;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        woodShieldRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Adocante;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Iron;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        woodShieldRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.WoodShield] = woodShieldRecipes;
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Adocante;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        sonoEternoRecipes.Add(recipe);
 
-        //Iron Shild
-        List<ItensCtrl.ItemType[,]> ironShieldRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Iron;
-        recipe[0, 1] = ItensCtrl.ItemType.Iron;
-        recipe[0, 2] = ItensCtrl.ItemType.Iron;
-        ironShieldRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.IronShield] = ironShieldRecipes;
-
-        //GoldRing
-        List<ItensCtrl.ItemType[,]> goldRingRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Adocante;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Gold;
-        recipe[0, 1] = ItensCtrl.ItemType.Gold;
-        recipe[0, 2] = ItensCtrl.ItemType.Gold;
-        goldRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        sonoEternoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.GoldRing] = goldRingRecipes;
-
-        //FireRing
-        List<ItensCtrl.ItemType[,]> fireRingRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldRing;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        fireRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.GoldRing;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        fireRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldRing;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        fireRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldRing;
-        fireRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.GoldRing;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        fireRingRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.GoldRing;
-        fireRingRecipes.Add(recipe);
-
-        recipeDictionary[ItensCtrl.ItemType.FireRing] = fireRingRecipes;
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.TuttiFruti;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        sonoEternoRecipes.Add(recipe);
 
-        //Axe
-        List<ItensCtrl.ItemType[,]> axeRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        axeRecipes.Add(recipe);
-
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        axeRecipes.Add(recipe);
-
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        axeRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.TuttiFruti;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        sonoEternoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Axe] = axeRecipes;
-
-        //Pickaxe
-        List<ItensCtrl.ItemType[,]> pickaxeRecipes = new List<ItensCtrl.ItemType[,]>();
-
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        pickaxeRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.TuttiFruti;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        pickaxeRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.TuttiFruti;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        pickaxeRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.TuttiFruti;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        sonoEternoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Pickaxe] = pickaxeRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        sonoEternoRecipes.Add(recipe);
 
-        //Bow
-        List<ItensCtrl.ItemType[,]> bowRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.BallOfWool;
-        bowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.BallOfWool;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        bowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.BallOfWool;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        bowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        sonoEternoRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.Bow] = bowRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.FrutasVermelhas;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        sonoEternoRecipes.Add(recipe);
 
-        //Arrow
-        List<ItensCtrl.ItemType[,]> arrowRecipes = new List<ItensCtrl.ItemType[,]>();
-        
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        arrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.VerrugaDeSapo;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        arrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.Adocante;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        arrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.RestoDeRaloDePia;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        arrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.TuttiFruti;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        arrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.CheiroDeCarro;
+        sonoEternoRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        arrowRecipes.Add(recipe);
-        
-        recipeDictionary[ItensCtrl.ItemType.Arrow] = arrowRecipes;
-        
+        recipe[0, 0] = ItensCtrl.ItemType.CheiroDeUnicornio;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.PernaDeCobra;
+        sonoEternoRecipes.Add(recipe);
 
-        //Poison Arrow
-        List<ItensCtrl.ItemType[,]> poisonArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipeDictionary[ItensCtrl.ItemType.SonoEterno] = sonoEternoRecipes;
 
-        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Poison;
-        poisonArrowRecipes.Add(recipe);
+        //VenenoDeCobra recipes
+        List<ItensCtrl.ItemType[,]> venenoDeCobraRecipes = new List<ItensCtrl.ItemType[,]>();
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Poison;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo; // Amargo
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba; // Potente
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Poison;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Poison;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Poison;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        poisonArrowRecipes.Add(recipe);
-
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Poison;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo; 
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima; 
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.Poison;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.VerrugaDeSapo; 
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Poison;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Poison;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Poison;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.Poison;
-        poisonArrowRecipes.Add(recipe);
-
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Poison;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        poisonArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.PoisonArrow] = poisonArrowRecipes;
-
-        //Flaming Arrow
-        List<ItensCtrl.ItemType[,]> flamingArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.PernaDeBarata;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.OlhoDePeixe;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.AlmaDeLagosta;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.Ruby;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Ruby;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        flamingArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
-        recipeDictionary[ItensCtrl.ItemType.FlamingArrow] = flamingArrowRecipes;
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
-        //Frozen Arrow
-        List<ItensCtrl.ItemType[,]> frozenArrowRecipes = new List<ItensCtrl.ItemType[,]>();
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.CheiroDeCarro;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Wood;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Stone;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Wood;
-        recipe[0, 2] = ItensCtrl.ItemType.Stone;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Stone;
-        recipe[0, 2] = ItensCtrl.ItemType.Wood;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.Amarelo;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.MandiocaBraba;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.None;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.Azeitona;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 1] = ItensCtrl.ItemType.None;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.PlutonioEnriquecido;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Arrow;
-        recipe[0, 2] = ItensCtrl.ItemType.Sapphire;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.CacoDeVidro;
+        venenoDeCobraRecipes.Add(recipe);
+        recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.AUltimaLagrima;
+        venenoDeCobraRecipes.Add(recipe);
 
         recipe = new ItensCtrl.ItemType[gridSizeX, gridSizeY];
-        recipe[0, 0] = ItensCtrl.ItemType.None;
-        recipe[0, 1] = ItensCtrl.ItemType.Sapphire;
-        recipe[0, 2] = ItensCtrl.ItemType.Arrow;
-        frozenArrowRecipes.Add(recipe);
+        recipe[0, 0] = ItensCtrl.ItemType.OlhoDeCobraCega;
+        recipe[0, 1] = ItensCtrl.ItemType.BundaDeTanajura;
+        recipe[0, 2] = ItensCtrl.ItemType.SuorDePombo;
+        venenoDeCobraRecipes.Add(recipe);
+
+        recipeDictionary[ItensCtrl.ItemType.SonoEterno] = sonoEternoRecipes;
 
-        recipeDictionary[ItensCtrl.ItemType.FrozenArrow] = frozenArrowRecipes;
     }
-
 
     public bool IsEmpty(int x, int y)
     {

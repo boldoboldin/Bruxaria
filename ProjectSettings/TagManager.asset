@@ -11,6 +11,7 @@ TagManager:
   - Trunk
   - Axe
   - Pickaxe
+  - Crafting
   layers:
   - Default
   - TransparentFX
